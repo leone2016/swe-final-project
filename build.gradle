@@ -30,28 +30,17 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
-	runtimeOnly 'mysql:mysql-connector-java:8.0.33'
+	runtimeOnly("com.mysql:mysql-connector-j:8.0.33")
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.security:spring-security-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
-tasks.named('test') {
-	useJUnitPlatform()
-}
+//tasks.named('test') {
+//	useJUnitPlatform()
+//}
 
-def updateApplicationProperties() {
-	def configFile = new File('src/main/resources/application.properties')
-	println "updating version to '${version}' in ${configFile}"
-	String configContent = configFile.getText('UTF-8')
-
-	configContent = configContent.replaceAll(/application\.projectVersion=.*/, "spring.application.version=${version}")
-	configFile.write(configContent, 'UTF-8')
-}
-allprojects {
-	updateApplicationProperties()
-}
 bootRun {
 	jvmArgs = ["-Dfile.encoding=UTF-8"]
 }
