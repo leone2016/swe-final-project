@@ -3,13 +3,13 @@ import { Router } from '@angular/router';
 import { Actions, concatLatestFrom, createEffect, ofType } from '@ngrx/effects';
 import { catchError, exhaustMap, map, of, switchMap, tap } from 'rxjs';
 import { AuthService } from '../services/auth.service';
-import { LocalStorageJwtService } from '../services/local-storage-jwt.service';
+import { LocalStorageAuthService } from '../services/local-storage-auth.service';
 import { authActions } from './auth.actions';
 import { formsActions, ngrxFormsQuery } from '@realworld/core/forms';
 import { Store } from '@ngrx/store';
 
 export const logout$ = createEffect(
-  (actions$ = inject(Actions), localStorageJwtService = inject(LocalStorageJwtService), router = inject(Router)) => {
+  (actions$ = inject(Actions), localStorageJwtService = inject(LocalStorageAuthService), router = inject(Router)) => {
     return actions$.pipe(
       ofType(authActions.logout),
       tap(() => {
@@ -27,7 +27,8 @@ export const getUser$ = createEffect(
       ofType(authActions.getUser),
       switchMap(() =>
         authService.user().pipe(
-          map((data) => authActions.getUserSuccess( data.user )),
+          // @ts-ignore
+          map((data) => authActions.getUserSuccess({ user: data })),
           catchError((error) => of(authActions.getUserFailure({ error }))),
         ),
       ),
@@ -43,7 +44,7 @@ export const login$ = createEffect(
       concatLatestFrom(() => store.select(ngrxFormsQuery.selectData)),
       exhaustMap(([, data]) =>
         authService.login(data).pipe(
-          map((response) => authActions.loginSuccess(response.user)),
+          map((response) => authActions.loginSuccess({ user: response.user })),
           catchError((result) => of(formsActions.setErrors({ errors: result.error.errors }))),
         ),
       ),
@@ -53,11 +54,12 @@ export const login$ = createEffect(
 );
 
 export const loginOrRegisterSuccess$ = createEffect(
-  (actions$ = inject(Actions), localStorageJwtService = inject(LocalStorageJwtService), router = inject(Router)) => {
+  (actions$ = inject(Actions), localStorageJwtService = inject(LocalStorageAuthService), router = inject(Router)) => {
     return actions$.pipe(
       ofType(authActions.loginSuccess, authActions.registerSuccess),
       tap((action) => {
-        localStorageJwtService.setItem(action.token);
+        localStorageJwtService.setItem(action.user.token);
+        localStorageJwtService.setUserActive(action.user);
         router.navigateByUrl('/');
       }),
     );
@@ -72,7 +74,7 @@ export const register$ = createEffect(
       concatLatestFrom(() => store.select(ngrxFormsQuery.selectData)),
       exhaustMap(([, data]) =>
         authService.register(data).pipe(
-          map((response) => authActions.registerSuccess(response.user)),
+          map((response) => authActions.registerSuccess({ user: response.user })),
           catchError((result) => of(formsActions.setErrors({ errors: result.error.errors }))),
         ),
       ),

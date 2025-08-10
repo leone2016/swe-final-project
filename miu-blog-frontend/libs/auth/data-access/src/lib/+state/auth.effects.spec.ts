@@ -13,7 +13,7 @@ import { Observable, of } from 'rxjs';
 import { authActions } from './auth.actions';
 import { MockProvider } from 'ng-mocks';
 import { AuthService } from '../services/auth.service';
-import { LocalStorageJwtService } from '../services/local-storage-jwt.service';
+import { LocalStorageAuthService } from '../services/local-storage-auth.service';
 import { AuthEffects } from './auth.effects';
 import { hot } from 'jasmine-marbles';
 
@@ -22,7 +22,7 @@ describe('AuthEffects', () => {
   let effects: AuthEffects;
   let service: AuthService;
   let router: Router;
-  let storage: LocalStorageJwtService;
+  let storage: LocalStorageAuthService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -30,7 +30,7 @@ describe('AuthEffects', () => {
       providers: [
         AuthEffects,
         provideMockActions(() => actions$),
-        LocalStorageJwtService,
+        LocalStorageAuthService,
         ApiService,
         MockProvider(AuthService),
         {
@@ -48,7 +48,7 @@ describe('AuthEffects', () => {
     actions$ = TestBed.inject(Actions);
     service = TestBed.inject(AuthService);
     router = TestBed.inject(Router);
-    storage = TestBed.inject(LocalStorageJwtService);
+    storage = TestBed.inject(LocalStorageAuthService);
 
     jest.spyOn(storage, 'setItem');
     jest.spyOn(storage, 'removeItem');

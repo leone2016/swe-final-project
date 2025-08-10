@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { ComponentStore } from '@ngrx/component-store';
 import { concatLatestFrom } from '@ngrx/effects';
 import { Store } from '@ngrx/store';
-import { LocalStorageJwtService, authActions } from '@realworld/auth/data-access';
+import { LocalStorageAuthService, authActions } from '@realworld/auth/data-access';
 import { ngrxFormsQuery } from '@realworld/core/forms';
 import { pipe } from 'rxjs';
 import { concatMap, map, tap } from 'rxjs/operators';
@@ -14,7 +14,7 @@ import { SettingsService } from './settings.service';
 export class SettingsStoreService extends ComponentStore<Record<string, unknown>> {
   constructor(
     private readonly settingsService: SettingsService,
-    private readonly localStorageJwtService: LocalStorageJwtService,
+    private readonly localStorageJwtService: LocalStorageAuthService,
     private readonly router: Router,
     private readonly store: Store,
   ) {

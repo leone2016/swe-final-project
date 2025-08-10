@@ -2,7 +2,7 @@ import { ApiService } from '@realworld/core/http-client';
 import { UserResponse } from '@realworld/core/api-types';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { LoginUser, LoginUserRequest, NewUser } from '@realworld/core/api-types';
+import { LoginUser, LoginUserRequest, NewUserRequest, NewUser } from '@realworld/core/api-types';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
@@ -17,6 +17,6 @@ export class AuthService {
   }
 
   register(credentials: NewUser): Observable<UserResponse> {
-    return this.apiService.post<UserResponse, NewUser>('/users',  credentials );
+    return this.apiService.post<UserResponse, NewUserRequest>('/users', { user: credentials });
   }
 }

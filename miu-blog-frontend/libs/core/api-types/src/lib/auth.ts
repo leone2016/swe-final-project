@@ -1,3 +1,6 @@
+export interface NewUserRequest {
+  user: NewUser;
+}
 
 export interface NewUser {
   username: string;

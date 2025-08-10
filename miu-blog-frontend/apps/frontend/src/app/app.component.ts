@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { Store } from '@ngrx/store';
-import { authActions, LocalStorageJwtService, selectLoggedIn, selectUser } from '@realworld/auth/data-access';
+import { authActions, LocalStorageAuthService, selectLoggedIn, selectUser } from '@realworld/auth/data-access';
 import { filter, take } from 'rxjs/operators';
 import { FooterComponent } from './layout/footer/footer.component';
 import { NavbarComponent } from './layout/navbar/navbar.component';
@@ -20,7 +20,7 @@ export class AppComponent implements OnInit {
   user$ = this.store.select(selectUser);
   isLoggedIn$ = this.store.select(selectLoggedIn);
 
-  constructor(private readonly store: Store, private readonly localStorageJwtService: LocalStorageJwtService) {}
+  constructor(private readonly store: Store, private readonly localStorageJwtService: LocalStorageAuthService) {}
 
   ngOnInit() {
     this.localStorageJwtService
@@ -29,6 +29,8 @@ export class AppComponent implements OnInit {
         take(1),
         filter((token) => !!token),
       )
-      .subscribe(() => this.store.dispatch(authActions.getUser()));
+      .subscribe(() => {
+        this.store.dispatch(authActions.getUser())
+      });
   }
 }

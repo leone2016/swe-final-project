@@ -6,13 +6,13 @@ export const authActions = createActionGroup({
   events: {
     getUser: emptyProps(),
     getUserFailure: props<{ error: Error }>(),
-    getUserSuccess: props<User>(),
+    getUserSuccess: props<{ user: User }>(),
     login: emptyProps(),
     loginFailure: props<{ error: Error }>(),
-    loginSuccess: props< User >(),
+    loginSuccess: props<{ user: User }>(),
     register: emptyProps(),
     registerFailure: props<{ error: Error }>(),
-    registerSuccess: props<User>(),
+    registerSuccess: props<{ user: User }>(),
     logout: emptyProps(),
   },
 });

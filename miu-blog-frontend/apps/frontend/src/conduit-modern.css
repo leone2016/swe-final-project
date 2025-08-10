@@ -1,0 +1,311 @@
+/* ========= Conduit modern refresh (override sin dark mode) ========= */
+/* Carga esto DESPUÉS de main.css */
+/* No cambia nombres de clases; solo re-estiliza selectores existentes */
+
+/* 1) Variables base + tipografías */
+:root{
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", "Apple Color Emoji","Segoe UI Emoji";
+  --radius-sm: .4rem;
+  --radius-md: .8rem;
+  --radius-lg: 1.2rem;
+
+  --shadow-sm: 0 1px 2px rgba(0,0,0,.06);
+  --shadow-md: 0 6px 16px rgba(0,0,0,.10);
+  --shadow-lg: 0 16px 32px rgba(0,0,0,.14);
+
+  /* Colores claros */
+  --bg: #ffffff;
+  --bg-soft: #f7f8fa;
+  --text: #111827;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --primary: #0ea5e9;      /* azul moderno */
+  --primary-700:#0284c7;
+  --success:#10b981;
+  --danger:#ef4444;
+  --link:#0ea5e9;
+  --tag:#f1f5f9;
+  --banner-from:#34d399;   /* emerald-300 */
+  --banner-to:#10b981;     /* emerald-500 */
+  --banner-accent:#22c55e; /* emerald-400 */
+  --banner-shadow: 0 10px 30px rgba(16,185,129,.25);
+}
+
+/* 2) Reset suave del look sin romper layout */
+body{
+  font-family: var(--font-sans);
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a{ color: var(--link); text-decoration: none; }
+a:hover{ text-decoration: underline; text-underline-offset: 3px; }
+
+img{ border-radius: var(--radius-sm); }
+
+/* 3) Contenedor y espacios más respirables */
+.container{
+  max-width: 1120px;
+}
+
+hr{ border-top: 1px solid var(--border); opacity:.7; }
+
+/* 4) Navbar */
+.navbar{
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+}
+.navbar .navbar-brand.logo-font,
+.navbar .navbar-brand{
+  letter-spacing: .4px;
+  font-weight: 800;
+}
+.navbar-light .navbar-nav .nav-link{
+  color: var(--muted);
+  transition: color .2s ease;
+}
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active{
+  color: var(--text);
+}
+
+/* 5) Botones */
+.btn{
+  border-radius: var(--radius-md) !important;
+  padding: .6rem 1rem;
+  font-weight: 600;
+  transition: transform .02s, box-shadow .2s ease, background-color .2s ease, color .2s ease, border-color .2s ease;
+  box-shadow: var(--shadow-sm);
+}
+.btn:active{ transform: translateY(1px); }
+.btn:focus-visible{
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+.btn-primary{
+  background: var(--primary);
+  border-color: var(--primary);
+}
+.btn-primary:hover{ background: var(--primary-700); border-color: var(--primary-700); }
+.btn-outline-primary{
+  color: var(--primary);
+  border-color: var(--primary);
+}
+.btn-outline-primary:hover{
+  color: #fff;
+  background: var(--primary);
+  border-color: var(--primary);
+}
+.btn-success{ background: var(--success); border-color: var(--success); }
+.btn-danger{  background: var(--danger);  border-color: var(--danger);  }
+
+/* 6) Inputs */
+.form-control{
+  border-radius: var(--radius-md);
+  border-color: var(--border);
+  background: var(--bg);
+  color: var(--text);
+  transition: box-shadow .2s ease, border-color .2s ease;
+}
+.form-control::placeholder{ color: var(--muted); }
+.form-control:focus{
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px color-mix(in oklab, var(--primary) 20%, transparent);
+}
+
+/* 7) Tags y nav-pills */
+.tag-pill{
+  //background: var(--tag) !important;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  border-radius: 999px !important;
+  padding: .25rem .6rem !important;
+}
+.nav-pills .nav-link{
+  border-radius: 999px;
+  color: var(--muted);
+  border: 1px solid transparent;
+}
+.nav-pills .nav-link.active,
+.nav-pills .nav-link:hover{
+  color: var(--text);
+  background: var(--bg-soft);
+  border-color: var(--border);
+}
+
+/* 8) Tarjetas/artículos */
+.article-preview,
+.card{
+  padding: 1rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow .25s ease, transform .02s;
+  cursor: pointer;
+}
+.article-preview:hover,
+.card:hover{ box-shadow: var(--shadow-md); }
+.article-preview .preview-link h1{
+  font-size: 1.15rem;
+  line-height: 1.4;
+
+}
+.article-meta{
+  border-bottom: 1px solid var(--border);
+  padding-bottom: .75rem;
+}
+.article-meta .info .author{ color: var(--text); font-weight: 700; }
+.article-meta .info .date{ color: var(--muted); }
+
+/* 9) Paginación */
+.pagination{
+  gap: .4rem;
+}
+.page-item .page-link{
+  border-radius: 10px;
+  border-color: var(--border);
+  color: var(--muted);
+}
+.page-item.active .page-link{
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+/* 10) Editor/Markdown */
+.editor-page .tag-list .tag-default{
+  background: var(--tag);
+  border-radius: 999px;
+}
+
+/* 11) Perfil/Settings paneles */
+.settings-page .card,
+.profile-page .card{
+  border-radius: var(--radius-lg);
+}
+
+/* 12) Footer */
+footer{
+  border-top: 1px solid var(--border);
+  background: var(--bg);
+}
+footer .logo-font{ opacity:.9; }
+
+/* 13) Utilidades de espaciado */
+.mt-6{ margin-top: 3rem !important; }
+.mb-6{ margin-bottom: 3rem !important; }
+.p-6{ padding: 3rem !important; }
+
+/* 14) Accesibilidad */
+*:focus-visible{
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+@media (prefers-reduced-motion: reduce){
+  *{ transition: none !important; animation: none !important; }
+}
+
+/* 15) States vacíos */
+.empty-state{
+  background: var(--bg-soft);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  text-align: center;
+  color: var(--muted);
+}
+
+/* 16) Tables y code blocks */
+table.table{
+  border-color: var(--border);
+}
+table.table th, table.table td{
+  border-color: var(--border);
+}
+pre, code{
+  background: var(--bg-soft);
+  border-radius: var(--radius-sm);
+}
+
+/* Fondo y layout del banner */
+.banner{
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255,255,255,.2);
+  background:
+    radial-gradient(1200px 400px at 80% -20%, rgba(255,255,255,.20), transparent 60%),
+    radial-gradient(800px 300px at 0% 120%, rgba(255,255,255,.10), transparent 60%),
+    linear-gradient(135deg, var(--banner-from) 0%, var(--banner-to) 100%);
+  box-shadow: var(--banner-shadow);
+  padding: clamp(2rem, 5vw, 5rem) 0;
+}
+
+/* sutil textura/luces */
+.banner::after{
+  content:"";
+  position:absolute; inset:0;
+  background:
+    repeating-linear-gradient( 45deg,
+    rgba(255,255,255,.06) 0 2px, transparent 2px 6px);
+  mix-blend-mode: soft-light;
+  opacity:.25;
+  pointer-events:none;
+}
+
+/* Centrado del contenido sin romper .container global */
+.banner .container{
+  text-align:center;
+  max-width: 1040px; /* un poco más estrecho para mejor lectura */
+}
+
+/* Título del banner (usa la misma clase .logo-font) */
+.banner .logo-font{
+  display:inline-block;
+  color:#fff;
+  font-weight: 900;
+  letter-spacing:.5px;
+  line-height:1.05;
+  font-size: clamp(2rem, 6vw, 4rem);
+  text-shadow:
+    0 2px 8px rgba(0,0,0,.15),
+    0 1px 0 rgba(0,0,0,.10);
+  margin-bottom: .5rem;
+  /* subrayado decorativo */
+  background-image: linear-gradient(to right, rgba(255,255,255,.0) 0, rgba(255,255,255,.35) 40%, rgba(255,255,255,.0) 100%);
+  background-repeat: no-repeat;
+  background-size: 0% .15em;
+  background-position: 0 100%;
+  transition: background-size .8s ease;
+}
+.banner:hover .logo-font{
+  background-size: 100% .15em;
+}
+
+/* Tagline / subtítulo del banner */
+.banner p{
+  color: rgba(255,255,255,.92);
+  font-size: clamp(1rem, 2.4vw, 1.5rem);
+  font-weight: 500;
+  margin: 0;
+  opacity:.95;
+  text-shadow: 0 1px 4px rgba(0,0,0,.12);
+}
+
+/* Línea inferior sutil del banner para separarlo del feed */
+.banner{
+  --_sep: color-mix(in oklab, #fff 15%, transparent);
+  border-bottom: 1px solid var(--_sep);
+}
+
+/* Ajustes responsivos finos */
+@media (max-width: 640px){
+  .banner{ padding: 1.5rem 0 2rem; }
+  .banner .logo-font{ letter-spacing:.3px; }
+}
+
+
+

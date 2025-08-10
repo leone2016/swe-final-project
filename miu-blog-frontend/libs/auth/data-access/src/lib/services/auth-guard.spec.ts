@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { authGuard } from './auth-guard';
 import { cold } from 'jasmine-marbles';
-import { LocalStorageJwtService } from './local-storage-jwt.service';
+import { LocalStorageAuthService } from './local-storage-auth.service';
 import { of } from 'rxjs';
 import { RouterTestingModule } from '@angular/router/testing';
 import { Component } from '@angular/core';
@@ -13,7 +13,7 @@ import { Component } from '@angular/core';
 class TestComponent {}
 
 describe('authGuard', () => {
-  let storage: LocalStorageJwtService;
+  let storage: LocalStorageAuthService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -25,10 +25,10 @@ describe('authGuard', () => {
           },
         ]),
       ],
-      providers: [{ provide: LocalStorageJwtService, useValue: { getItem: () => of('token') } }],
+      providers: [{ provide: LocalStorageAuthService, useValue: { getItem: () => of('token') } }],
     });
 
-    storage = TestBed.inject(LocalStorageJwtService);
+    storage = TestBed.inject(LocalStorageAuthService);
   });
 
   it('should return true if the user is logged in', () => {

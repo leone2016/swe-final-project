@@ -5,7 +5,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { FooterComponent } from './layout/footer/footer.component';
 import { NavbarComponent } from './layout/navbar/navbar.component';
 import { StoreModule } from '@ngrx/store';
-import { LocalStorageJwtService } from '@realworld/auth/data-access';
+import { LocalStorageAuthService } from '@realworld/auth/data-access';
 import { provideMockStore } from '@ngrx/store/testing';
 
 describe('AppComponent', () => {
@@ -16,7 +16,7 @@ describe('AppComponent', () => {
     TestBed.configureTestingModule({
       imports: [RouterTestingModule, StoreModule.forRoot({})],
       declarations: [AppComponent, FooterComponent, NavbarComponent],
-      providers: [LocalStorageJwtService, provideMockStore({})],
+      providers: [LocalStorageAuthService, provideMockStore({})],
     }).compileComponents();
   }));
 
