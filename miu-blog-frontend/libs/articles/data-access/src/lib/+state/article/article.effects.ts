@@ -60,7 +60,12 @@ export const addComment$ = createEffect(
       concatLatestFrom(() => store.select(ngrxFormsQuery.selectData)),
       exhaustMap(([{ slug }, data]) =>
         articlesService.addComment(slug, data.comment).pipe(
-          map((response) => articleActions.addCommentSuccess({ comment: response.comment })),
+
+          map((response) => {
+            console.log(response);
+            // articleActions.loadCommentsSuccess({ comments: data.comments })
+            return articleActions.addCommentSuccess({ comments: response.comments.reverse() });
+          }),
           catchError(({ error }) => of(formsActions.setErrors({ errors: error.errors }))),
         ),
       ),
@@ -100,7 +105,7 @@ export const loadComments$ = createEffect(
       ofType(articleActions.loadComments),
       concatMap((action) =>
         articlesService.getComments(action.slug).pipe(
-          map((data) => articleActions.loadCommentsSuccess({ comments: data.comments })),
+          map((data) => articleActions.loadCommentsSuccess({ comments: data.comments.reverse() })),
           catchError((error) => of(articleActions.loadCommentsFailure(error))),
         ),
       ),

@@ -22,11 +22,9 @@ export const articleActions = createActionGroup({
     unfollowSuccess: props<{ profile: Profile }>(),
     addComment: props<{ slug: string }>(),
     addCommentFailure: props<{ error: Error }>(),
-    addCommentSuccess: props<{ comment: Comment }>(),
+    addCommentSuccess: props<{ comments: Comment[] }>(),
     deleteComment: props<{ commentId: number; slug: string }>(),
     deleteCommentFailure: props<{ error: Error }>(),
     deleteCommentSuccess: props<{ commentId: number }>(),
-    // lockArticle: props<{ slug: string }>(),
-    // unlockArticle: props<{ slug: string }>(),
   },
 });

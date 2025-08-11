@@ -57,7 +57,7 @@ export const articleFeature = createFeature({
       loading: false,
     })),
     on(articleActions.addCommentSuccess, (state, action) => {
-      const comments: Comment[] = [action.comment, ...state.comments];
+      const comments: Comment[] = action.comments;
       return { ...state, comments };
     }),
     on(articleActions.deleteCommentSuccess, (state, action) => {
