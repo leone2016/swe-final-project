@@ -36,15 +36,30 @@
   --nav-border:#e5e7eb;
   --nav-shadow: 0 6px 20px rgba(0,0,0,.08);
   --nav-primary:#10b981;   /* mismo tono del banner */
+
+  --auth-primary:#0ea5e9;    /* azul vivo */
+  --auth-primary-700:#0284c7;
+  --auth-bg-1:#eef9ff;
+  --auth-bg-2:#f7fbff;
+  --auth-border:#e5e7eb;
+  --auth-text:#0f172a;
+  --auth-muted:#6b7280;
 }
 
 /* 2) Reset suave del look sin romper layout */
 body{
   font-family: var(--font-sans);
-  background: var(--bg);
   color: var(--text);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+
+  background:
+    radial-gradient(900px 300px at 85% 0%, rgba(14,165,233,.10), transparent 60%),
+    radial-gradient(700px 260px at 0% 100%, rgba(99,102,241,.10), transparent 60%),
+    linear-gradient(180deg, var(--auth-bg-1), var(--auth-bg-2));
+  min-height: calc(100vh - 70px); /* resto del navbar */
+  /*display: grid;*/
+  /*place-items: start center;*/
 }
 
 a{ color: var(--link); text-decoration: none; }
@@ -439,3 +454,117 @@ pre, code{
   .navbar-light .navbar-nav .nav-link{ padding: .45rem .6rem; }
 }
 
+
+
+/**/
+
+/* Columna/card del formulario (no cambiamos clases del markup) */
+.auth-page .col-md-6.offset-md-3,
+.auth-page .col-md-6.offset-md-3.col-xs-12,
+.editor-page .col-md-10.offset-md-1.col-xs-12,
+.settings-page .col-md-6.offset-md-3.col-xs-12
+{
+  width: 100%;
+  /*max-width: 520px;*/
+  background: rgba(255,255,255,.86);
+  border: 1px solid var(--auth-border);
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(2,132,199,.12);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  padding: clamp(1rem, 3.5vw, 2.25rem) !important;
+}
+
+/* Título y link “Need an account?” */
+.auth-page h1{
+  font-weight: 900;
+  letter-spacing: .3px;
+  color: var(--auth-text);
+  font-size: clamp(1.75rem, 4.5vw, 2.75rem);
+  margin-bottom: .25rem;
+  text-align: center;
+}
+.auth-page .text-xs-center{
+  text-align: center !important;
+  margin-bottom: 1.5rem;
+}
+.auth-page .text-xs-center a{
+  color: var(--auth-primary);
+  font-weight: 700;
+  text-decoration: none;
+}
+.auth-page .text-xs-center a:hover{
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Campos */
+.auth-page .form-group{ margin-bottom: .9rem; }
+
+.auth-page .form-control{
+  height: 56px;
+  border-radius: 16px;
+  border: 1px solid var(--auth-border);
+  background: #fff;
+  color: var(--auth-text);
+  font-size: 1.05rem;
+  padding: .9rem 1rem;
+  transition: border-color .2s ease, box-shadow .2s ease, background-color .2s ease;
+}
+.auth-page .form-control::placeholder{ color: var(--auth-muted); }
+.auth-page .form-control:focus{
+  border-color: var(--auth-primary);
+  box-shadow: 0 0 0 6px color-mix(in oklab, var(--auth-primary) 18%, transparent);
+  background: #fff;
+}
+
+/* Botón principal */
+.auth-page .btn.btn-primary{
+  border: none;
+  border-radius: 18px;
+  padding: .9rem 1.4rem;
+  font-weight: 800;
+  letter-spacing: .2px;
+  background: linear-gradient(135deg, var(--auth-primary) 0%, var(--auth-primary-700) 100%);
+  box-shadow: 0 10px 22px rgba(14,165,233,.35);
+  transition: transform .06s ease, box-shadow .2s ease, filter .2s ease;
+}
+.auth-page .btn.btn-primary:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 14px 28px rgba(14,165,233,.40);
+  filter: brightness(1.02);
+}
+.auth-page .btn.btn-primary:active{
+  transform: translateY(1px);
+}
+
+/* Errores del formulario (ul.error-messages del main.css) */
+.auth-page .error-messages{
+  list-style: none;
+  margin: 0 0 1rem 0;
+  padding: .75rem 1rem;
+  border-radius: 12px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+  box-shadow: 0 4px 10px rgba(185,28,28,.06);
+}
+
+/* Separador sutil arriba de la card */
+.auth-page .col-md-6.offset-md-3::before{
+  content:"";
+  display:block;
+  height: 6px;
+  width: 64px;
+  margin: 0 auto 1rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--auth-primary), var(--auth-primary-700));
+  opacity:.7;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 576px){
+  .auth-page{ padding-top: 1.25rem; }
+  .auth-page .col-md-6.offset-md-3{ padding: 1rem !important; }
+  .auth-page .btn.btn-primary{ width: 100%; }
+}
