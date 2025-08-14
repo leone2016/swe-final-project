@@ -66,14 +66,8 @@ public class Article {
     private List<Comment> comments;
 
     @Transient
-    private boolean isLocked = false;
-
-    @Transient
     private List<Tag> tags;
 
-    public void setIsLocked(boolean islocked) {
-        this.isLocked = islocked;
-    }
 
     public void setTags(List<Tag> tags) {
         this.tags = tags;

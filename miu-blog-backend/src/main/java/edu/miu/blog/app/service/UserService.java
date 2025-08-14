@@ -10,6 +10,6 @@ public interface UserService {
     UserResponse findByEmail(String email);
 
     UserResponse update(String email, UserUpdateRequest request);
-//    UserLoginResponse register(UserRegisterRequest request);
-//    void delete(String email);
+
+
 }

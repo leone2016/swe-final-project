@@ -10,14 +10,16 @@ import io.jsonwebtoken.security.Keys;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+import javax.crypto.SecretKey;
 import java.nio.charset.StandardCharsets;
-import java.security.Key;
 import java.util.Date;
+
+
 
 @Component
 public class JwtUtil {
 
-    private final Key key;
+    private final SecretKey key;
     private final long EXPIRATION = 1000L * 60 * 60 * 24 * 7; // 7 días
 
     public JwtUtil(@Value("${jwt.secret}") String secret) {
@@ -41,16 +43,16 @@ public class JwtUtil {
         try {
             extractAllClaims(token);
             return true;
-        } catch (JwtException e) {
+        } catch (JwtException e) { // expirado, firma inválida, etc.
             return false;
         }
     }
 
     public Claims extractAllClaims(String token) throws JwtException {
-        return Jwts.parserBuilder()
-                .setSigningKey(key)
+        return Jwts.parser()
+                .verifyWith(key)
                 .build()
-                .parseClaimsJws(token)
-                .getBody();
+                .parseSignedClaims(token)
+                .getPayload(); // Claims
     }
 }

@@ -9,6 +9,7 @@ import edu.miu.blog.app.dto.user.UserUpdateRequest;
 import edu.miu.blog.app.error.exception.BusinessException;
 import edu.miu.blog.app.error.exception.ResourceNotFoundException;
 import edu.miu.blog.app.repository.UserRepository;
+import edu.miu.blog.app.security.JwtUtil;
 import edu.miu.blog.app.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -20,7 +21,7 @@ import static org.springframework.http.HttpStatus.UNAUTHORIZED;
 @RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
-//    private final JwtUtil jwtUtil;
+    private final JwtUtil jwtUtil;
 
     @Override
     public UserResponse register(UserRegisterRequest request) {
@@ -36,13 +37,13 @@ public class UserServiceImpl implements UserService {
         user.setImage("https://cdn.vectorstock.com/i/preview-2x/43/98/default-avatar-photo-placeholder-icon-grey-vector-38594398.webp");
 
         userRepository.save(user);
-//        String token = jwtUtil.generateToken(user);
+        String token = jwtUtil.generateToken(user);
         UserResponse response = UserResponse.builder()
                 .username(user.getUsername())
                 .email(user.getEmail())
                 .bio(user.getBio())
                 .image(user.getImage())
-                .token("token").build();
+                .token(token).build();
 
         return response;
     }
@@ -53,14 +54,14 @@ public class UserServiceImpl implements UserService {
                         request.email(),
                         request.password())
                 .orElseThrow(() -> new ResponseStatusException(UNAUTHORIZED, "Invalid credentials"));
-//        String token = jwtUtil.generateToken(user);
+        String token = jwtUtil.generateToken(user);
 
         return UserResponse.builder()
                 .email(user.getEmail())
                 .username(user.getUsername())
                 .bio(user.getBio())
                 .image(user.getImage())
-                .token("token").build();
+                .token(token).build();
 
 
     }
@@ -73,7 +74,7 @@ public class UserServiceImpl implements UserService {
                 .email(user.getEmail())
                 .bio(user.getBio())
                 .image(user.getImage())
-                .token("jwtUtil.generateToken(user)")
+                .token(jwtUtil.generateToken(user))
                 .build();
     }
 
@@ -101,9 +102,10 @@ public class UserServiceImpl implements UserService {
                 .email(user.getEmail())
                 .bio(user.getBio())
                 .image(user.getImage())
-                .token("jwtUtil.generateToken(user)")
+                .token(jwtUtil.generateToken(user))
                 .build();
     }
+
 
 
 }
