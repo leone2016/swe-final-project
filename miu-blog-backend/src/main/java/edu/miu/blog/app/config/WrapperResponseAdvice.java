@@ -29,11 +29,11 @@ public class WrapperResponseAdvice implements ResponseBodyAdvice<Object> {
 
         WrapWith annotation = returnType.getMethodAnnotation(WrapWith.class);
 
-        if (annotation == null || annotation.value().equals("omit")) {
+        if (annotation == null) {
             annotation = returnType.getContainingClass().getAnnotation(WrapWith.class);
         }
 
-        if (annotation != null) {
+        if (annotation != null && !annotation.value().equals("omit")) {
             return Map.of(annotation.value(), body);
         }
 

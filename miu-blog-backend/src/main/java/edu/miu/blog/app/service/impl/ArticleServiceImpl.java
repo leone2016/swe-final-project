@@ -4,6 +4,7 @@ import edu.miu.blog.app.domain.Article;
 import edu.miu.blog.app.domain.Tag;
 import edu.miu.blog.app.domain.User;
 import edu.miu.blog.app.dto.article.*;
+import edu.miu.blog.app.dto.roaster.RoasterDto;
 import edu.miu.blog.app.dto.user.UserResponse;
 import edu.miu.blog.app.error.exception.ResourceNotFoundException;
 import edu.miu.blog.app.repository.ArticleRepository;
@@ -135,7 +136,11 @@ public class ArticleServiceImpl implements ArticleService {
         Page<Article> page = articleRepository.findAll(spec, pageReq);
 
         List<ArticleResponse> responses = page.getContent().stream()
-                .map(a -> handlerArticleResponse(a))
+                .map(article ->{
+                    ArticleResponse articleResponse = handlerArticleResponse(article);
+                    articleResponse.setAuthor(handlerUserResponse(article.getAuthor()));
+                    return articleResponse;
+                })
                 .collect(Collectors.toList());
 
         return new ArticleListResponse(responses, page.getTotalElements());
@@ -168,7 +173,7 @@ public class ArticleServiceImpl implements ArticleService {
     }
 
     @Override
-    public List<Object> findRoasterUsers(int limit, int offset) {
+    public List<RoasterDto> findRoasterUsers(int limit, int offset) {
         return articleRepository.findRoasterUsers(limit, offset);
     }
 

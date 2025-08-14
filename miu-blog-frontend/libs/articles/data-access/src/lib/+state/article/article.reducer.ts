@@ -42,7 +42,7 @@ export const articleFeature = createFeature({
   reducer: createReducer(
     articleInitialState,
     on(articleActions.loadArticleSuccess, (state, action) => {
-      let authors: Profile[] = [...action.article.authors, action.article.author];
+      let authors: Profile[] = [ action.article.author];
       return {
         ...state,
         data: { ...action.article, authors },

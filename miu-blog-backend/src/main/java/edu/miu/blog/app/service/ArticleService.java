@@ -1,6 +1,7 @@
 package edu.miu.blog.app.service;
 
 import edu.miu.blog.app.dto.article.*;
+import edu.miu.blog.app.dto.roaster.RoasterDto;
 import edu.miu.blog.app.security.CurrentUser;
 
 import java.util.List;
@@ -15,7 +16,7 @@ public interface ArticleService {
 
     ArticleListResponse getFeedForUser(Long userId, int limit, int offset);
 
-    List<Object> findRoasterUsers(int limit, int offset);
+    List<RoasterDto> findRoasterUsers(int limit, int offset);
 
     ArticleResponse getArticleBySlug(String slug, CurrentUser currentUser);
 }

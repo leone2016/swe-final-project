@@ -2,6 +2,7 @@ package edu.miu.blog.app.repository;
 
 import edu.miu.blog.app.domain.Article;
 import edu.miu.blog.app.domain.User;
+import edu.miu.blog.app.dto.roaster.RoasterDto;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -34,7 +35,7 @@ public interface ArticleRepository   extends JpaRepository<Article,Long>, JpaSpe
             "ORDER BY totalLikesReceived DESC " +
             "LIMIT :limit OFFSET :offset",
             nativeQuery = true)
-    List<Object> findRoasterUsers(@Param("limit") int limit, @Param("offset") int offset);
+    List<RoasterDto> findRoasterUsers(@Param("limit") int limit, @Param("offset") int offset);
 
 }
 

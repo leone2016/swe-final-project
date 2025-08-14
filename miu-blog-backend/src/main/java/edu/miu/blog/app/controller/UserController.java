@@ -31,10 +31,11 @@ public class UserController {
 
     @PostMapping("/login")
     public ResponseEntity<UserResponse> login(
-            @Valid @RequestBody UserLoginRequest request) {
+             @RequestBody UserLoginRequest request) {
         return ResponseEntity.status(OK).body(userService.login(request));
     }
 
+    @WrapWith("omit")
     @GetMapping()
     public ResponseEntity<UserResponse> findMe() {
         CurrentUser user = UserContext.get();

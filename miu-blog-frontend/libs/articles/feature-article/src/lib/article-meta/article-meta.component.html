@@ -23,14 +23,14 @@
       <button
         class="btn btn-sm action-btn"
         [ngClass]="{
-          'btn-outline-secondary': !author.following,
-          'btn-secondary': author.following
+          'btn-outline-secondary': !article.author.following,
+          'btn-secondary': article.author.following
         }"
         (click)="toggleFollow(author)"
       >
         <i class="ion-plus-round"></i>
-        &nbsp; {{ author.following ? 'Unfollow' : 'Follow' }}
-        {{ author.username }}
+        &nbsp; {{ article.author.following ? 'Unfollow' : 'Follow' }}
+        {{ article.author.username }}
       </button>
       &nbsp;&nbsp;
       <button

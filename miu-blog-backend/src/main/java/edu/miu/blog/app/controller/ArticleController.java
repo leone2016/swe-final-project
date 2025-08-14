@@ -1,6 +1,7 @@
 package edu.miu.blog.app.controller;
 
 import edu.miu.blog.app.dto.article.*;
+import edu.miu.blog.app.dto.roaster.RoasterDto;
 import edu.miu.blog.app.security.CurrentUser;
 import edu.miu.blog.app.security.UserContext;
 import edu.miu.blog.app.service.ArticleService;
@@ -76,7 +77,7 @@ public class ArticleController {
 
     @WrapWith("roaster")
     @GetMapping("/roaster")
-    public ResponseEntity<List<Object>> getRoasterUsers(
+    public ResponseEntity<List<RoasterDto>> getRoasterUsers(
             @RequestParam(defaultValue = "20") int limit,
             @RequestParam(defaultValue = "0") int offset) {
 

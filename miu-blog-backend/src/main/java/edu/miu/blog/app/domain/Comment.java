@@ -31,7 +31,7 @@ public class Comment {
     @Column(nullable = false)
     private LocalDateTime updatedAt;
 
-    @Column(nullable = false, columnDefinition = "TEXT")
+    @Column(nullable = false,columnDefinition = "TEXT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci")
     private String body;
 
     @ManyToOne(fetch = FetchType.LAZY)

@@ -23,13 +23,13 @@ public class Article {
     @Column(nullable = false)
     private String slug;
 
-    @Column(nullable = false)
+    @Column(nullable = false, columnDefinition = "VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci")
     private String title;
 
-    @Column(nullable = false)
+    @Column(nullable = false,columnDefinition = "VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci")
     private String description;
 
-    @Column(nullable = false)
+    @Column(nullable = false,columnDefinition = "TEXT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci")
     private String body;
 
     @Column(name = "created_at", nullable = false)

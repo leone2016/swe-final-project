@@ -4,11 +4,13 @@ import edu.miu.blog.app.dto.profile.ProfileDto;
 import edu.miu.blog.app.security.CurrentUser;
 import edu.miu.blog.app.security.UserContext;
 import edu.miu.blog.app.service.ProfileService;
+import edu.miu.blog.app.util.WrapWith;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+@WrapWith("profile")
 @RestController
 @RequestMapping("/api/profiles")
 @RequiredArgsConstructor

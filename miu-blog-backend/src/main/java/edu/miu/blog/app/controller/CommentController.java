@@ -32,11 +32,11 @@ public class CommentController {
     }
 
     @GetMapping("{slug}/comments")
-    public ResponseEntity<Map<String, List<CommentResponse>>> getCommentsBySlug(@PathVariable String slug) {
+    public ResponseEntity<List<CommentResponse>> getCommentsBySlug(@PathVariable String slug) {
         CurrentUser user = UserContext.get();
 
         List<CommentResponse> comments = commentService.getCommentsByArticleSlug(slug);
-        return ResponseEntity.ok(Map.of("comments", comments));
+        return ResponseEntity.ok(comments);
     }
 
 }
