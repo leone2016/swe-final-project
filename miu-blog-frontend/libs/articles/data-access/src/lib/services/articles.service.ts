@@ -44,7 +44,7 @@ export class ArticlesService {
         article: article,
       });
     }
-    return this.apiService.post<ArticleResponse, ArticleResponse>('/articles/', { article: article });
+    return this.apiService.post<ArticleResponse, ArticleResponse>('/articles', { article: article });
   }
 
   // lockArticle(slug: string): Observable<ArticleResponse> {

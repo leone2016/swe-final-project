@@ -1,16 +1,17 @@
 ## Problem Statement
+
 <p align="justify">
 In today’s digital era, the ability to create, share, and engage with content online has become not only a personal outlet but also a professional necessity. Blogging platforms have grown into vital tools for storytelling, knowledge sharing, and even building personal brands. However, many of the existing systems are either overwhelmingly complex, insufficiently customizable, or lack the architectural clarity needed for developers, especially those looking to learn and grow through practical, full-stack development experience.
 </p>
 <p align="justify">
-Recognizing this gap, <b>Maharishi International University</b> has proposed a meaningful challenge: to design and implement a modern, scalable, and developer-friendly blogging platform that mirrors the simplicity and power of platforms like Medium.com. The goal is not just to build a website, but to create a <b>learning vehicle</b> a real-world project that emphasizes best practices in software design while delivering a smooth, engaging user experience.
-</p>
+Recognizing this gap, <b>Maharishi International University</b> has proposed a meaningful challenge: to design and implement a modern, scalable, and developer-friendly blogging platform that mirrors the simplicity and power of platforms like Medium.com.
+
 
 <p align="justify">
 Despite the abundance of templates and tutorials available, few offer the kind of full-stack solution that developers truly need. Most backend systems fall short in key areas such as <b>clean RESTful API architecture</b>, <b>JWT-based authentication</b>, and <b>modular domain-layer separation</b>. On the frontend, developers often find themselves struggling with <b>reactive UI design</b>, lack of real-time feedback, and inconsistent integration with backend APIs. Additionally, combining features like <b>user authentication</b>, <b>article management</b>, and <b>social interaction</b> (e.g., following users, commenting on posts) into a cohesive, testable, and extensible platform remains a common hurdle.
 </p>
-
 ### Addressing These Challenges: Our Vision
+
 <p align="justify">
 This project sets out to develop a **complete social blogging platform from scratch**, grounded in the principles of clean architecture and modern development. The application will support the full lifecycle of user-generated content while fostering community engagement through social features.
 </p>
@@ -37,7 +38,7 @@ This project sets out to develop a **complete social blogging platform from scra
 
 - As a user, I want to edit my profile so that I can update my personal information.
 - As a user, I want to view other authors' profiles so that I can see their publications.
-- As a user, I want to view my own profile with my articles and statistics.
+- As a user, I want to view my own profile with my articles.
 
 ------
 
@@ -64,7 +65,7 @@ This project sets out to develop a **complete social blogging platform from scra
 
 ------
 
-### 6. **Favorites and Tags**
+### 6. **Favorites and Tags  [Favorite feature is PENDING]**
 
 - As a user, I want to favorite articles so that I can access them quickly later.
 - As a user, I want to see all my favorited articles.
