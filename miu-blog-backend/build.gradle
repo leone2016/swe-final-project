@@ -58,6 +58,11 @@ dependencies {
 
 	implementation("org.springframework.boot:spring-boot-starter-mail:3.5.6")
 
+    // Jackson Databind
+    implementation 'com.fasterxml.jackson.core:jackson-databind'
+
+    // Spring Boot JSON Starter
+    implementation 'org.springframework.boot:spring-boot-starter-json'
 
 }
 
