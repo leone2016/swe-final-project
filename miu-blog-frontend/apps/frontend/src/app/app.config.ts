@@ -1,4 +1,4 @@
-import { ApplicationConfig } from '@angular/core';
+import { ApplicationConfig, importProvidersFrom } from '@angular/core';
 import { provideRouter } from '@angular/router';
 import { provideRouterStore } from '@ngrx/router-store';
 import { ngrxFormsEffects, ngrxFormsFeature } from '@realworld/core/forms';
@@ -10,6 +10,7 @@ import { provideEffects } from '@ngrx/effects';
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import { API_URL } from '@realworld/core/http-client';
 import { environment } from '../environments/environment';
+import { ChatWidgetComponent } from './chat-widget/chat-widget.component';
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter([

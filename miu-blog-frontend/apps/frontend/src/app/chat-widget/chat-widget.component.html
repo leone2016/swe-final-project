@@ -1,0 +1,23 @@
+<div class="chat-container">
+  <div class="chat-header" (click)="toggleChat()">💬 Chat with Edd</div>
+
+  <div class="chat-box" *ngIf="isOpen">
+    <div class="messages" #messagesContainer>
+      <div *ngFor="let msg of messages" class="message" [ngClass]="msg.role">
+        <div class="bubble">{{ msg.content }}</div>
+      </div>
+
+      <div *ngIf="loading" class="message assistant typing">
+        <div class="bubble">
+          <div class="spinner"></div>
+          Edd is typing...
+        </div>
+      </div>
+    </div>
+
+    <div class="chat-input">
+      <input [(ngModel)]="message" placeholder="Type a message..." (keyup.enter)="sendMessage()" />
+      <button (click)="sendMessage()">Send</button>
+    </div>
+  </div>
+</div>

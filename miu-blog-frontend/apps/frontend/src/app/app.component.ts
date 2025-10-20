@@ -6,14 +6,14 @@ import { authActions, LocalStorageAuthService, selectLoggedIn, selectUser } from
 import { filter, take } from 'rxjs/operators';
 import { FooterComponent } from './layout/footer/footer.component';
 import { NavbarComponent } from './layout/navbar/navbar.component';
+import { ChatWidgetComponent } from './chat-widget/chat-widget.component';
 
 @Component({
   selector: 'cdt-root',
   standalone: true,
-
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  imports: [FooterComponent, NavbarComponent, RouterModule, CommonModule],
+  imports: [FooterComponent, NavbarComponent, RouterModule, CommonModule, ChatWidgetComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent implements OnInit {
@@ -30,7 +30,7 @@ export class AppComponent implements OnInit {
         filter((token) => !!token),
       )
       .subscribe(() => {
-        this.store.dispatch(authActions.getUser())
+        this.store.dispatch(authActions.getUser());
       });
   }
 }
