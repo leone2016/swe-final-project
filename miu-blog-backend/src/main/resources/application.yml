@@ -12,6 +12,24 @@ server:
 # http://localhost:8092/h2-console
 # Enabling H2 Console
 spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: blog-group
+      auto-offset-reset: earliest
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: "*"
+    producer:
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: lmedinaencalada@gmail.com
+    password: $SPRING_MAIL_PASSWORD
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
   h2:
     console:
       enabled: false
@@ -43,5 +61,18 @@ spring:
           characterEncoding: utf8mb4
           charSet: utf8mb4
 logging:
+  level:
+    root: INFO
+    edu.miu.blog.app: DEBUG
+    org.springframework.security: DEBUG
+    org.springframework.web: DEBUG
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.springframework.transaction: DEBUG
   pattern:
-    console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"
+    console: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"
+  file:
+    name: logs/miu-blog-backend.log
+    max-size: 10MB
+    max-history: 30

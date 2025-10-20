@@ -1,6 +1,7 @@
 package edu.miu.blog.app.security;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -15,12 +16,15 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @Configuration
 @EnableWebSecurity
 @RequiredArgsConstructor
+@Slf4j
 public class SecurityConfig {
 
     private final JwtAuthenticationFilter jwtFilter;
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+        log.info("Configuring security filter chain");
+        
         http
                 .csrf(csrf -> csrf.disable())
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
@@ -43,11 +47,13 @@ public class SecurityConfig {
                 .httpBasic(basic -> basic.disable())
                 .formLogin(form -> form.disable());
 
+        log.info("Security configuration completed");
         return http.build();
     }
 
     @Bean
     public PasswordEncoder passwordEncoder() {
+        log.info("Creating BCrypt password encoder");
         return new BCryptPasswordEncoder();
     }
 }

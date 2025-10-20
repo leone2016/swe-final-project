@@ -7,6 +7,7 @@ import edu.miu.blog.app.service.UserService;
 import edu.miu.blog.app.util.WrapWith;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,6 +18,7 @@ import static org.springframework.http.HttpStatus.OK;
 @RestController
 @RequestMapping("/api/users")
 @RequiredArgsConstructor
+@Slf4j
 public class UserController {
 
     private final UserService userService;
@@ -25,27 +27,39 @@ public class UserController {
     @PostMapping
     public ResponseEntity<UserResponse> register(
             @RequestBody UserRegisterRequest body) {
-        return ResponseEntity.status(CREATED).body(userService.register(body));
+        log.info("User registration request for username: {}", body.username());
+        UserResponse response = userService.register(body);
+        log.info("User registered successfully with email: {}", response.getEmail());
+        return ResponseEntity.status(CREATED).body(response);
     }
 
 
     @PostMapping("/login")
     public ResponseEntity<UserResponse> login(
              @RequestBody UserLoginRequest request) {
-        return ResponseEntity.status(OK).body(userService.login(request));
+        log.info("User login attempt for email: {}", request.email());
+        UserResponse response = userService.login(request);
+        log.info("User logged in successfully: {}", response.getUsername());
+        return ResponseEntity.status(OK).body(response);
     }
 
     @WrapWith("omit")
     @GetMapping()
     public ResponseEntity<UserResponse> findMe() {
         CurrentUser user = UserContext.get();
-        return ResponseEntity.ok(userService.findByEmail(user.getEmail()));
+        log.debug("User requesting own profile: {}", user.getUsername());
+        UserResponse response = userService.findByEmail(user.getEmail());
+        log.debug("Profile retrieved for user: {}", response.getUsername());
+        return ResponseEntity.ok(response);
     }
 
     @PutMapping
     public ResponseEntity<UserResponse> updateUser(
             @RequestBody UserUpdateRequest request) {
         CurrentUser user = UserContext.get();
-        return ResponseEntity.ok(userService.update(user.getEmail(), request));
+        log.info("User update request for: {}", user.getUsername());
+        UserResponse response = userService.update(user.getEmail(), request);
+        log.info("User updated successfully: {}", response.getUsername());
+        return ResponseEntity.ok(response);
     }
 }

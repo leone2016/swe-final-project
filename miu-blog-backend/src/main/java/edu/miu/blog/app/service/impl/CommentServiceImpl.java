@@ -12,6 +12,7 @@ import edu.miu.blog.app.repository.CommentRepository;
 import edu.miu.blog.app.repository.UserRepository;
 import edu.miu.blog.app.service.CommentService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -21,6 +22,7 @@ import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class CommentServiceImpl implements CommentService {
 
     private final ArticleRepository articleRepository;
@@ -29,6 +31,8 @@ public class CommentServiceImpl implements CommentService {
 
     @Override
     public List<CommentResponse> addComment(String slug, CommentRequest request, Long userId) {
+        log.info("Adding comment to article with slug: {} by user: {}", slug, userId);
+        
         Article article = articleRepository.findBySlug(slug)
                 .orElseThrow(() -> new ResourceNotFoundException("Article not found"));
 
@@ -43,6 +47,7 @@ public class CommentServiceImpl implements CommentService {
         comment.setUpdatedAt(LocalDateTime.now());
 
         commentRepository.save(comment);
+        log.info("Comment added successfully to article: {}", slug);
 
         return commentRepository.findByArticle(article).stream()
                 .map(c -> CommentResponse.builder()
@@ -58,10 +63,12 @@ public class CommentServiceImpl implements CommentService {
 
     @Override
     public List<CommentResponse> getCommentsByArticleSlug(String slug) {
+        log.info("Getting comments for article with slug: {}", slug);
+        
         Article article = articleRepository.findBySlug(slug)
                 .orElseThrow(() -> new ResourceNotFoundException("Article not found"));
 
-        return commentRepository.findByArticle(article).stream()
+        List<CommentResponse> comments = commentRepository.findByArticle(article).stream()
                 .map(c -> CommentResponse.builder()
                         .id(c.getId())
                         .body(c.getBody())
@@ -71,6 +78,9 @@ public class CommentServiceImpl implements CommentService {
                         .author(getUserById(c.getAuthor()))
                         .build())
                 .collect(Collectors.toList());
+                
+        log.info("Retrieved {} comments for article: {}", comments.size(), slug);
+        return comments;
     }
 
     public UserResponse getUserById(User  user) {

@@ -1,11 +1,11 @@
 package edu.miu.blog.app.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.MethodParameter;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpInputMessage;
 import org.springframework.http.converter.HttpMessageConverter;
-import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.servlet.mvc.method.annotation.RequestBodyAdviceAdapter;
 
@@ -16,6 +16,7 @@ import java.lang.reflect.Type;
 import java.util.Map;
 
 @ControllerAdvice
+@Slf4j
 public class WrapperRequestAdvice extends RequestBodyAdviceAdapter {
 
     private final ObjectMapper objectMapper;
@@ -36,10 +37,13 @@ public class WrapperRequestAdvice extends RequestBodyAdviceAdapter {
                                            Type targetType,
                                            Class<? extends HttpMessageConverter<?>> converterType) throws IOException, IOException {
 
+        log.debug("Processing request body for method: {}", parameter.getMethod().getName());
+        
         // Leer el JSON original como Map
         Map<String, Object> wrapper = objectMapper.readValue(inputMessage.getBody(), Map.class);
 
         if (wrapper.size() == 1) {
+            log.debug("Unwrapping single-element JSON object");
             Object innerValue = wrapper.values().iterator().next();
             byte[] jsonBytes = objectMapper.writeValueAsBytes(innerValue);
 
@@ -57,6 +61,7 @@ public class WrapperRequestAdvice extends RequestBodyAdviceAdapter {
             };
         }
 
+        log.debug("No unwrapping needed - passing request body as-is");
         return inputMessage; // si no cumple formato, pasa tal cual
     }
 }

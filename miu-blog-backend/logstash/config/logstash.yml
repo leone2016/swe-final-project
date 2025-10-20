@@ -1,0 +1,2 @@
+# Set the host for the Monitoring API to ensure it's accessible within the container
+api.http.host: "0.0.0.0"

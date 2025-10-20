@@ -1,0 +1,1465 @@
+2025-10-19 17:01:17.388 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-10-19 17:01:17.412 [restartedMain] INFO  e.m.b.app.MiuBlogBackendApplication - Starting MiuBlogBackendApplication v0.0.1 using Java 24.0.1 with PID 43052 (/Users/leone/Documents/MIU/swe-final-project/miu-blog-backend/build/classes/java/main started by leone in /Users/leone/Documents/MIU/swe-final-project/miu-blog-backend)
+2025-10-19 17:01:17.413 [restartedMain] DEBUG e.m.b.app.MiuBlogBackendApplication - Running with Spring Boot v3.5.4, Spring v6.2.9
+2025-10-19 17:01:17.413 [restartedMain] INFO  e.m.b.app.MiuBlogBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-10-19 17:01:17.444 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-19 17:01:17.444 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-19 17:01:18.018 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-19 17:01:18.074 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 49 ms. Found 4 JPA repository interfaces.
+2025-10-19 17:01:18.432 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8092 (http)
+2025-10-19 17:01:18.440 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8092"]
+2025-10-19 17:01:18.441 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-10-19 17:01:18.441 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-10-19 17:01:18.462 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-10-19 17:01:18.463 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1018 ms
+2025-10-19 17:01:18.466 [restartedMain] INFO  e.m.blog.app.config.GlobalCorsConfig - Configuring CORS filter
+2025-10-19 17:01:18.470 [restartedMain] INFO  e.m.blog.app.config.GlobalCorsConfig - CORS filter configured successfully
+2025-10-19 17:01:18.478 [restartedMain] INFO  edu.miu.blog.app.security.JwtUtil - Initializing JWT utility with secret key
+2025-10-19 17:01:18.500 [restartedMain] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2025-10-19 17:01:18.501 [restartedMain] DEBUG o.s.web.filter.CorsFilter - Filter 'customCorsFilter' configured for use
+2025-10-19 17:01:18.583 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-19 17:01:18.608 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-10-19 17:01:18.628 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-10-19 17:01:18.773 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-19 17:01:18.788 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-10-19 17:01:18.886 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1db7e111
+2025-10-19 17:01:18.887 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-10-19 17:01:18.912 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-19 17:01:18.920 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.43
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-19 17:01:19.375 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-19 17:01:19.440 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-19 17:01:19.580 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-19 17:01:19.946 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-19 17:01:19.958 [restartedMain] INFO  edu.miu.blog.app.config.WebConfig - Configuring CORS mappings
+2025-10-19 17:01:19.958 [restartedMain] INFO  edu.miu.blog.app.config.WebConfig - CORS mappings configured successfully
+2025-10-19 17:01:19.993 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 18 mappings in 'requestMappingHandlerMapping'
+2025-10-19 17:01:20.010 [restartedMain] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-10-19 17:01:20.020 [restartedMain] INFO  e.m.blog.app.security.SecurityConfig - Creating BCrypt password encoder
+2025-10-19 17:01:20.021 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: d38801f0-0737-4319-8a07-bd81c53fa73a
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-10-19 17:01:20.024 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-10-19 17:01:20.044 [restartedMain] INFO  e.m.blog.app.security.SecurityConfig - Configuring security filter chain
+2025-10-19 17:01:20.056 [restartedMain] INFO  e.m.blog.app.security.SecurityConfig - Security configuration completed
+2025-10-19 17:01:20.064 [restartedMain] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-10-19 17:01:20.096 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 2 RequestBodyAdvice, 2 ResponseBodyAdvice
+2025-10-19 17:01:20.120 [restartedMain] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 2 ResponseBodyAdvice
+2025-10-19 17:01:20.173 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-10-19 17:01:20.184 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8092"]
+2025-10-19 17:01:20.195 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8092 (http) with context path '/'
+2025-10-19 17:01:20.206 [restartedMain] INFO  e.m.b.app.MiuBlogBackendApplication - Started MiuBlogBackendApplication in 3.159 seconds (process running for 3.379)
+2025-10-19 17:01:20.210 [restartedMain] INFO  e.m.b.app.MiuBlogBackendApplication - MIU Blog Backend Application started successfully
+2025-10-19 17:07:17.749 [http-nio-8092-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-19 17:07:17.749 [http-nio-8092-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-10-19 17:07:17.749 [http-nio-8092-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2025-10-19 17:07:17.749 [http-nio-8092-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2025-10-19 17:07:17.749 [http-nio-8092-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2025-10-19 17:07:17.750 [http-nio-8092-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@2bbc820
+2025-10-19 17:07:17.750 [http-nio-8092-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@1bab9b28
+2025-10-19 17:07:17.750 [http-nio-8092-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-10-19 17:07:17.750 [http-nio-8092-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-10-19 17:07:17.768 [http-nio-8092-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/articles/roaster
+2025-10-19 17:07:17.770 [http-nio-8092-exec-2] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Processing request: GET /api/articles/roaster
+2025-10-19 17:07:17.770 [http-nio-8092-exec-2] DEBUG e.m.b.a.s.JwtAuthenticationFilter - No Authorization header or user already authenticated
+2025-10-19 17:07:17.771 [http-nio-8092-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-10-19 17:07:17.772 [http-nio-8092-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/articles/roaster
+2025-10-19 17:07:17.773 [http-nio-8092-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/articles/roaster", parameters={}
+2025-10-19 17:07:17.774 [http-nio-8092-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to edu.miu.blog.app.controller.ArticleController#getRoasterUsers(int, int)
+2025-10-19 17:07:17.786 [http-nio-8092-exec-2] INFO  e.m.b.a.controller.ArticleController - Getting roaster users with limit: 20, offset: 0
+2025-10-19 17:07:17.811 [http-nio-8092-exec-2] DEBUG org.hibernate.SQL - SELECT u.id AS id, u.username AS username, COUNT(DISTINCT a.id) AS totalArticlesWritten, COALESCE(COUNT(uf.article_id), 0) AS totalLikesReceived, MIN(a.created_at) AS firstArticleDate FROM article a LEFT JOIN user u ON a.author_id = u.id LEFT JOIN user_favorites uf ON uf.article_id = a.id GROUP BY u.id, u.username ORDER BY totalLikesReceived DESC LIMIT ? OFFSET ?
+2025-10-19 17:07:17.826 [http-nio-8092-exec-2] INFO  e.m.b.a.controller.ArticleController - Found 4 roaster users
+2025-10-19 17:07:17.833 [http-nio-8092-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-10-19 17:07:17.833 [http-nio-8092-exec-2] DEBUG e.m.b.a.config.WrapperResponseAdvice - Processing response body for method: getRoasterUsers
+2025-10-19 17:07:17.833 [http-nio-8092-exec-2] DEBUG e.m.b.a.config.WrapperResponseAdvice - Wrapping response with key: roaster
+2025-10-19 17:07:17.834 [http-nio-8092-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{roaster=[{username=leone, totalArticlesWritten=1, id=1, totalLikesReceived=0, firstArticleDate=2025 (truncated)...]
+2025-10-19 17:07:17.860 [http-nio-8092-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-10-19 17:07:29.567 [http-nio-8092-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/users/login
+2025-10-19 17:07:29.567 [http-nio-8092-exec-4] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Processing request: POST /api/users/login
+2025-10-19 17:07:29.567 [http-nio-8092-exec-4] DEBUG e.m.b.a.s.JwtAuthenticationFilter - No Authorization header or user already authenticated
+2025-10-19 17:07:29.567 [http-nio-8092-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-10-19 17:07:29.568 [http-nio-8092-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/users/login
+2025-10-19 17:07:29.568 [http-nio-8092-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/users/login", parameters={}
+2025-10-19 17:07:29.568 [http-nio-8092-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to edu.miu.blog.app.controller.UserController#login(UserLoginRequest)
+2025-10-19 17:07:29.587 [http-nio-8092-exec-4] DEBUG e.m.b.a.config.WrapperRequestAdvice - Processing request body for method: login
+2025-10-19 17:07:29.596 [http-nio-8092-exec-4] DEBUG e.m.b.a.config.WrapperRequestAdvice - Unwrapping single-element JSON object
+2025-10-19 17:07:29.600 [http-nio-8092-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [UserLoginRequest[email=leoz.31@hotmail.com, password=1234]]
+2025-10-19 17:07:29.600 [http-nio-8092-exec-4] INFO  e.m.b.app.controller.UserController - User login attempt for email: leoz.31@hotmail.com
+2025-10-19 17:07:29.600 [http-nio-8092-exec-4] INFO  e.m.b.a.service.impl.UserServiceImpl - User login attempt for email: leoz.31@hotmail.com
+2025-10-19 17:07:29.624 [http-nio-8092-exec-4] DEBUG org.hibernate.SQL - select u1_0.id,u1_0.bio,u1_0.email,u1_0.image,u1_0.password,u1_0.username from user u1_0 where u1_0.email=? and u1_0.password=?
+2025-10-19 17:07:29.630 [http-nio-8092-exec-4] WARN  e.m.b.a.service.impl.UserServiceImpl - Login failed - invalid credentials for email: leoz.31@hotmail.com
+2025-10-19 17:07:29.632 [http-nio-8092-exec-4] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler edu.miu.blog.app.error.GlobalControllerAdvice#handleResponseStatusException(ResponseStatusException, WebRequest)
+2025-10-19 17:07:29.632 [http-nio-8092-exec-4] WARN  e.m.b.a.error.GlobalControllerAdvice - Response status exception occurred: 401 UNAUTHORIZED - Invalid credentials
+2025-10-19 17:07:29.638 [http-nio-8092-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-10-19 17:07:29.638 [http-nio-8092-exec-4] DEBUG e.m.b.a.config.WrapperResponseAdvice - Processing response body for method: handleResponseStatusException
+2025-10-19 17:07:29.638 [http-nio-8092-exec-4] DEBUG e.m.b.a.config.WrapperResponseAdvice - Wrapping response with key: errors
+2025-10-19 17:07:29.638 [http-nio-8092-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{errors=edu.miu.blog.app.error.ErrorMessage@43209743}]
+2025-10-19 17:07:29.639 [http-nio-8092-exec-4] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.server.ResponseStatusException: 401 UNAUTHORIZED "Invalid credentials"]
+2025-10-19 17:07:29.639 [http-nio-8092-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 401 UNAUTHORIZED
+2025-10-19 17:07:31.347 [http-nio-8092-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/users/login
+2025-10-19 17:07:31.347 [http-nio-8092-exec-5] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Processing request: POST /api/users/login
+2025-10-19 17:07:31.347 [http-nio-8092-exec-5] DEBUG e.m.b.a.s.JwtAuthenticationFilter - No Authorization header or user already authenticated
+2025-10-19 17:07:31.347 [http-nio-8092-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-10-19 17:07:31.347 [http-nio-8092-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/users/login
+2025-10-19 17:07:31.347 [http-nio-8092-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/users/login", parameters={}
+2025-10-19 17:07:31.348 [http-nio-8092-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to edu.miu.blog.app.controller.UserController#login(UserLoginRequest)
+2025-10-19 17:07:31.349 [http-nio-8092-exec-5] DEBUG e.m.b.a.config.WrapperRequestAdvice - Processing request body for method: login
+2025-10-19 17:07:31.349 [http-nio-8092-exec-5] DEBUG e.m.b.a.config.WrapperRequestAdvice - Unwrapping single-element JSON object
+2025-10-19 17:07:31.349 [http-nio-8092-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [UserLoginRequest[email=leoz.31@hotmail.com, password=1234]]
+2025-10-19 17:07:31.349 [http-nio-8092-exec-5] INFO  e.m.b.app.controller.UserController - User login attempt for email: leoz.31@hotmail.com
+2025-10-19 17:07:31.349 [http-nio-8092-exec-5] INFO  e.m.b.a.service.impl.UserServiceImpl - User login attempt for email: leoz.31@hotmail.com
+2025-10-19 17:07:31.350 [http-nio-8092-exec-5] DEBUG org.hibernate.SQL - select u1_0.id,u1_0.bio,u1_0.email,u1_0.image,u1_0.password,u1_0.username from user u1_0 where u1_0.email=? and u1_0.password=?
+2025-10-19 17:07:31.354 [http-nio-8092-exec-5] WARN  e.m.b.a.service.impl.UserServiceImpl - Login failed - invalid credentials for email: leoz.31@hotmail.com
+2025-10-19 17:07:31.355 [http-nio-8092-exec-5] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler edu.miu.blog.app.error.GlobalControllerAdvice#handleResponseStatusException(ResponseStatusException, WebRequest)
+2025-10-19 17:07:31.355 [http-nio-8092-exec-5] WARN  e.m.b.a.error.GlobalControllerAdvice - Response status exception occurred: 401 UNAUTHORIZED - Invalid credentials
+2025-10-19 17:07:31.355 [http-nio-8092-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-10-19 17:07:31.355 [http-nio-8092-exec-5] DEBUG e.m.b.a.config.WrapperResponseAdvice - Processing response body for method: handleResponseStatusException
+2025-10-19 17:07:31.356 [http-nio-8092-exec-5] DEBUG e.m.b.a.config.WrapperResponseAdvice - Wrapping response with key: errors
+2025-10-19 17:07:31.356 [http-nio-8092-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{errors=edu.miu.blog.app.error.ErrorMessage@10875e93}]
+2025-10-19 17:07:31.356 [http-nio-8092-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.server.ResponseStatusException: 401 UNAUTHORIZED "Invalid credentials"]
+2025-10-19 17:07:31.356 [http-nio-8092-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 401 UNAUTHORIZED
+2025-10-19 17:07:44.612 [http-nio-8092-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/users/login
+2025-10-19 17:07:44.612 [http-nio-8092-exec-7] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Processing request: POST /api/users/login
+2025-10-19 17:07:44.612 [http-nio-8092-exec-7] DEBUG e.m.b.a.s.JwtAuthenticationFilter - No Authorization header or user already authenticated
+2025-10-19 17:07:44.612 [http-nio-8092-exec-7] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-10-19 17:07:44.613 [http-nio-8092-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/users/login
+2025-10-19 17:07:44.613 [http-nio-8092-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/users/login", parameters={}
+2025-10-19 17:07:44.613 [http-nio-8092-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to edu.miu.blog.app.controller.UserController#login(UserLoginRequest)
+2025-10-19 17:07:44.614 [http-nio-8092-exec-7] DEBUG e.m.b.a.config.WrapperRequestAdvice - Processing request body for method: login
+2025-10-19 17:07:44.614 [http-nio-8092-exec-7] DEBUG e.m.b.a.config.WrapperRequestAdvice - Unwrapping single-element JSON object
+2025-10-19 17:07:44.615 [http-nio-8092-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [UserLoginRequest[email=leoz.31@hotmail.com, password=123456]]
+2025-10-19 17:07:44.615 [http-nio-8092-exec-7] INFO  e.m.b.app.controller.UserController - User login attempt for email: leoz.31@hotmail.com
+2025-10-19 17:07:44.615 [http-nio-8092-exec-7] INFO  e.m.b.a.service.impl.UserServiceImpl - User login attempt for email: leoz.31@hotmail.com
+2025-10-19 17:07:44.616 [http-nio-8092-exec-7] DEBUG org.hibernate.SQL - select u1_0.id,u1_0.bio,u1_0.email,u1_0.image,u1_0.password,u1_0.username from user u1_0 where u1_0.email=? and u1_0.password=?
+2025-10-19 17:07:44.619 [http-nio-8092-exec-7] WARN  e.m.b.a.service.impl.UserServiceImpl - Login failed - invalid credentials for email: leoz.31@hotmail.com
+2025-10-19 17:07:44.620 [http-nio-8092-exec-7] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler edu.miu.blog.app.error.GlobalControllerAdvice#handleResponseStatusException(ResponseStatusException, WebRequest)
+2025-10-19 17:07:44.620 [http-nio-8092-exec-7] WARN  e.m.b.a.error.GlobalControllerAdvice - Response status exception occurred: 401 UNAUTHORIZED - Invalid credentials
+2025-10-19 17:07:44.620 [http-nio-8092-exec-7] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-10-19 17:07:44.620 [http-nio-8092-exec-7] DEBUG e.m.b.a.config.WrapperResponseAdvice - Processing response body for method: handleResponseStatusException
+2025-10-19 17:07:44.620 [http-nio-8092-exec-7] DEBUG e.m.b.a.config.WrapperResponseAdvice - Wrapping response with key: errors
+2025-10-19 17:07:44.621 [http-nio-8092-exec-7] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{errors=edu.miu.blog.app.error.ErrorMessage@7f7bd31e}]
+2025-10-19 17:07:44.623 [http-nio-8092-exec-7] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.server.ResponseStatusException: 401 UNAUTHORIZED "Invalid credentials"]
+2025-10-19 17:07:44.623 [http-nio-8092-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 401 UNAUTHORIZED
+2025-10-19 17:07:55.103 [http-nio-8092-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/users/login
+2025-10-19 17:07:55.104 [http-nio-8092-exec-9] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Processing request: POST /api/users/login
+2025-10-19 17:07:55.104 [http-nio-8092-exec-9] DEBUG e.m.b.a.s.JwtAuthenticationFilter - No Authorization header or user already authenticated
+2025-10-19 17:07:55.104 [http-nio-8092-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-10-19 17:07:55.104 [http-nio-8092-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/users/login
+2025-10-19 17:07:55.104 [http-nio-8092-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/users/login", parameters={}
+2025-10-19 17:07:55.105 [http-nio-8092-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to edu.miu.blog.app.controller.UserController#login(UserLoginRequest)
+2025-10-19 17:07:55.106 [http-nio-8092-exec-9] DEBUG e.m.b.a.config.WrapperRequestAdvice - Processing request body for method: login
+2025-10-19 17:07:55.106 [http-nio-8092-exec-9] DEBUG e.m.b.a.config.WrapperRequestAdvice - Unwrapping single-element JSON object
+2025-10-19 17:07:55.106 [http-nio-8092-exec-9] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [UserLoginRequest[email=leoz.31@hotmail.com, password=123456]]
+2025-10-19 17:07:55.106 [http-nio-8092-exec-9] INFO  e.m.b.app.controller.UserController - User login attempt for email: leoz.31@hotmail.com
+2025-10-19 17:07:55.106 [http-nio-8092-exec-9] INFO  e.m.b.a.service.impl.UserServiceImpl - User login attempt for email: leoz.31@hotmail.com
+2025-10-19 17:07:55.108 [http-nio-8092-exec-9] DEBUG org.hibernate.SQL - select u1_0.id,u1_0.bio,u1_0.email,u1_0.image,u1_0.password,u1_0.username from user u1_0 where u1_0.email=? and u1_0.password=?
+2025-10-19 17:07:55.111 [http-nio-8092-exec-9] WARN  e.m.b.a.service.impl.UserServiceImpl - Login failed - invalid credentials for email: leoz.31@hotmail.com
+2025-10-19 17:07:55.112 [http-nio-8092-exec-9] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler edu.miu.blog.app.error.GlobalControllerAdvice#handleResponseStatusException(ResponseStatusException, WebRequest)
+2025-10-19 17:07:55.112 [http-nio-8092-exec-9] WARN  e.m.b.a.error.GlobalControllerAdvice - Response status exception occurred: 401 UNAUTHORIZED - Invalid credentials
+2025-10-19 17:07:55.112 [http-nio-8092-exec-9] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-10-19 17:07:55.112 [http-nio-8092-exec-9] DEBUG e.m.b.a.config.WrapperResponseAdvice - Processing response body for method: handleResponseStatusException
+2025-10-19 17:07:55.112 [http-nio-8092-exec-9] DEBUG e.m.b.a.config.WrapperResponseAdvice - Wrapping response with key: errors
+2025-10-19 17:07:55.112 [http-nio-8092-exec-9] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{errors=edu.miu.blog.app.error.ErrorMessage@576dc4ab}]
+2025-10-19 17:07:55.113 [http-nio-8092-exec-9] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.server.ResponseStatusException: 401 UNAUTHORIZED "Invalid credentials"]
+2025-10-19 17:07:55.113 [http-nio-8092-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 401 UNAUTHORIZED
+2025-10-19 17:08:37.869 [http-nio-8092-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/users/login
+2025-10-19 17:08:37.870 [http-nio-8092-exec-1] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Processing request: POST /api/users/login
+2025-10-19 17:08:37.870 [http-nio-8092-exec-1] DEBUG e.m.b.a.s.JwtAuthenticationFilter - No Authorization header or user already authenticated
+2025-10-19 17:08:37.870 [http-nio-8092-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-10-19 17:08:37.870 [http-nio-8092-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/users/login
+2025-10-19 17:08:37.870 [http-nio-8092-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/users/login", parameters={}
+2025-10-19 17:08:37.870 [http-nio-8092-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to edu.miu.blog.app.controller.UserController#login(UserLoginRequest)
+2025-10-19 17:08:37.871 [http-nio-8092-exec-1] DEBUG e.m.b.a.config.WrapperRequestAdvice - Processing request body for method: login
+2025-10-19 17:08:37.872 [http-nio-8092-exec-1] DEBUG e.m.b.a.config.WrapperRequestAdvice - Unwrapping single-element JSON object
+2025-10-19 17:08:37.872 [http-nio-8092-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [UserLoginRequest[email=leoz.31@hotmail.com, password=123456789]]
+2025-10-19 17:08:37.872 [http-nio-8092-exec-1] INFO  e.m.b.app.controller.UserController - User login attempt for email: leoz.31@hotmail.com
+2025-10-19 17:08:37.872 [http-nio-8092-exec-1] INFO  e.m.b.a.service.impl.UserServiceImpl - User login attempt for email: leoz.31@hotmail.com
+2025-10-19 17:08:37.877 [http-nio-8092-exec-1] DEBUG org.hibernate.SQL - select u1_0.id,u1_0.bio,u1_0.email,u1_0.image,u1_0.password,u1_0.username from user u1_0 where u1_0.email=? and u1_0.password=?
+2025-10-19 17:08:37.884 [http-nio-8092-exec-1] WARN  e.m.b.a.service.impl.UserServiceImpl - Login failed - invalid credentials for email: leoz.31@hotmail.com
+2025-10-19 17:08:37.885 [http-nio-8092-exec-1] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler edu.miu.blog.app.error.GlobalControllerAdvice#handleResponseStatusException(ResponseStatusException, WebRequest)
+2025-10-19 17:08:37.885 [http-nio-8092-exec-1] WARN  e.m.b.a.error.GlobalControllerAdvice - Response status exception occurred: 401 UNAUTHORIZED - Invalid credentials
+2025-10-19 17:08:37.885 [http-nio-8092-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-10-19 17:08:37.885 [http-nio-8092-exec-1] DEBUG e.m.b.a.config.WrapperResponseAdvice - Processing response body for method: handleResponseStatusException
+2025-10-19 17:08:37.885 [http-nio-8092-exec-1] DEBUG e.m.b.a.config.WrapperResponseAdvice - Wrapping response with key: errors
+2025-10-19 17:08:37.885 [http-nio-8092-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{errors=edu.miu.blog.app.error.ErrorMessage@6a8b4a9c}]
+2025-10-19 17:08:37.885 [http-nio-8092-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.server.ResponseStatusException: 401 UNAUTHORIZED "Invalid credentials"]
+2025-10-19 17:08:37.886 [http-nio-8092-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 401 UNAUTHORIZED
+2025-10-19 17:08:45.252 [http-nio-8092-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/users/login
+2025-10-19 17:08:45.252 [http-nio-8092-exec-3] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Processing request: POST /api/users/login
+2025-10-19 17:08:45.252 [http-nio-8092-exec-3] DEBUG e.m.b.a.s.JwtAuthenticationFilter - No Authorization header or user already authenticated
+2025-10-19 17:08:45.252 [http-nio-8092-exec-3] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-10-19 17:08:45.252 [http-nio-8092-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/users/login
+2025-10-19 17:08:45.253 [http-nio-8092-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/users/login", parameters={}
+2025-10-19 17:08:45.253 [http-nio-8092-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to edu.miu.blog.app.controller.UserController#login(UserLoginRequest)
+2025-10-19 17:08:45.253 [http-nio-8092-exec-3] DEBUG e.m.b.a.config.WrapperRequestAdvice - Processing request body for method: login
+2025-10-19 17:08:45.254 [http-nio-8092-exec-3] DEBUG e.m.b.a.config.WrapperRequestAdvice - Unwrapping single-element JSON object
+2025-10-19 17:08:45.254 [http-nio-8092-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [UserLoginRequest[email=leoz.31@hotmail.com, password=1234]]
+2025-10-19 17:08:45.254 [http-nio-8092-exec-3] INFO  e.m.b.app.controller.UserController - User login attempt for email: leoz.31@hotmail.com
+2025-10-19 17:08:45.254 [http-nio-8092-exec-3] INFO  e.m.b.a.service.impl.UserServiceImpl - User login attempt for email: leoz.31@hotmail.com
+2025-10-19 17:08:45.256 [http-nio-8092-exec-3] DEBUG org.hibernate.SQL - select u1_0.id,u1_0.bio,u1_0.email,u1_0.image,u1_0.password,u1_0.username from user u1_0 where u1_0.email=? and u1_0.password=?
+2025-10-19 17:08:45.260 [http-nio-8092-exec-3] WARN  e.m.b.a.service.impl.UserServiceImpl - Login failed - invalid credentials for email: leoz.31@hotmail.com
+2025-10-19 17:08:45.260 [http-nio-8092-exec-3] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler edu.miu.blog.app.error.GlobalControllerAdvice#handleResponseStatusException(ResponseStatusException, WebRequest)
+2025-10-19 17:08:45.260 [http-nio-8092-exec-3] WARN  e.m.b.a.error.GlobalControllerAdvice - Response status exception occurred: 401 UNAUTHORIZED - Invalid credentials
+2025-10-19 17:08:45.260 [http-nio-8092-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-10-19 17:08:45.260 [http-nio-8092-exec-3] DEBUG e.m.b.a.config.WrapperResponseAdvice - Processing response body for method: handleResponseStatusException
+2025-10-19 17:08:45.260 [http-nio-8092-exec-3] DEBUG e.m.b.a.config.WrapperResponseAdvice - Wrapping response with key: errors
+2025-10-19 17:08:45.260 [http-nio-8092-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{errors=edu.miu.blog.app.error.ErrorMessage@6079ca8d}]
+2025-10-19 17:08:45.261 [http-nio-8092-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.server.ResponseStatusException: 401 UNAUTHORIZED "Invalid credentials"]
+2025-10-19 17:08:45.261 [http-nio-8092-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 401 UNAUTHORIZED
+2025-10-19 17:09:12.555 [http-nio-8092-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing POST /api/users/login
+2025-10-19 17:09:12.556 [http-nio-8092-exec-5] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Processing request: POST /api/users/login
+2025-10-19 17:09:12.556 [http-nio-8092-exec-5] DEBUG e.m.b.a.s.JwtAuthenticationFilter - No Authorization header or user already authenticated
+2025-10-19 17:09:12.556 [http-nio-8092-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-10-19 17:09:12.556 [http-nio-8092-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured POST /api/users/login
+2025-10-19 17:09:12.556 [http-nio-8092-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/users/login", parameters={}
+2025-10-19 17:09:12.556 [http-nio-8092-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to edu.miu.blog.app.controller.UserController#login(UserLoginRequest)
+2025-10-19 17:09:12.558 [http-nio-8092-exec-5] DEBUG e.m.b.a.config.WrapperRequestAdvice - Processing request body for method: login
+2025-10-19 17:09:12.558 [http-nio-8092-exec-5] DEBUG e.m.b.a.config.WrapperRequestAdvice - Unwrapping single-element JSON object
+2025-10-19 17:09:12.559 [http-nio-8092-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [UserLoginRequest[email=leoz.31@hotmail.com, password=12345]]
+2025-10-19 17:09:12.559 [http-nio-8092-exec-5] INFO  e.m.b.app.controller.UserController - User login attempt for email: leoz.31@hotmail.com
+2025-10-19 17:09:12.559 [http-nio-8092-exec-5] INFO  e.m.b.a.service.impl.UserServiceImpl - User login attempt for email: leoz.31@hotmail.com
+2025-10-19 17:09:12.560 [http-nio-8092-exec-5] DEBUG org.hibernate.SQL - select u1_0.id,u1_0.bio,u1_0.email,u1_0.image,u1_0.password,u1_0.username from user u1_0 where u1_0.email=? and u1_0.password=?
+2025-10-19 17:09:12.587 [http-nio-8092-exec-5] INFO  e.m.b.a.service.impl.UserServiceImpl - User logged in successfully: leone
+2025-10-19 17:09:12.587 [http-nio-8092-exec-5] DEBUG edu.miu.blog.app.security.JwtUtil - Generating JWT token for user: leone
+2025-10-19 17:09:12.623 [http-nio-8092-exec-5] DEBUG edu.miu.blog.app.security.JwtUtil - JWT token generated successfully for user: leone
+2025-10-19 17:09:12.624 [http-nio-8092-exec-5] INFO  e.m.b.app.controller.UserController - User logged in successfully: leone
+2025-10-19 17:09:12.625 [http-nio-8092-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-10-19 17:09:12.626 [http-nio-8092-exec-5] DEBUG e.m.b.a.config.WrapperResponseAdvice - Processing response body for method: login
+2025-10-19 17:09:12.626 [http-nio-8092-exec-5] DEBUG e.m.b.a.config.WrapperResponseAdvice - Wrapping response with key: user
+2025-10-19 17:09:12.626 [http-nio-8092-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{user=UserResponse(id=null, email=leoz.31@hotmail.com, token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJsZW96Lj (truncated)...]
+2025-10-19 17:09:12.628 [http-nio-8092-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-10-19 17:09:12.660 [http-nio-8092-exec-7] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/tags
+2025-10-19 17:09:12.661 [http-nio-8092-exec-7] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Processing request: GET /api/tags
+2025-10-19 17:09:12.661 [http-nio-8092-exec-7] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Found Authorization header
+2025-10-19 17:09:12.661 [http-nio-8092-exec-7] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Resolving token from header
+2025-10-19 17:09:12.661 [http-nio-8092-exec-7] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Found Token header
+2025-10-19 17:09:12.661 [http-nio-8092-exec-7] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Validating JWT token
+2025-10-19 17:09:12.661 [http-nio-8092-exec-7] DEBUG edu.miu.blog.app.security.JwtUtil - Extracting claims from JWT token
+2025-10-19 17:09:12.667 [http-nio-8092-exec-9] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/articles/feed?limit=10
+2025-10-19 17:09:12.668 [http-nio-8092-exec-9] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Processing request: GET /api/articles/feed
+2025-10-19 17:09:12.668 [http-nio-8092-exec-9] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Found Authorization header
+2025-10-19 17:09:12.668 [http-nio-8092-exec-9] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Resolving token from header
+2025-10-19 17:09:12.668 [http-nio-8092-exec-9] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Found Token header
+2025-10-19 17:09:12.668 [http-nio-8092-exec-9] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Validating JWT token
+2025-10-19 17:09:12.668 [http-nio-8092-exec-9] DEBUG edu.miu.blog.app.security.JwtUtil - Extracting claims from JWT token
+2025-10-19 17:09:12.683 [http-nio-8092-exec-7] DEBUG edu.miu.blog.app.security.JwtUtil - Successfully extracted claims from JWT token
+2025-10-19 17:09:12.683 [http-nio-8092-exec-9] DEBUG edu.miu.blog.app.security.JwtUtil - Successfully extracted claims from JWT token
+2025-10-19 17:09:12.683 [http-nio-8092-exec-7] DEBUG e.m.b.a.s.JwtAuthenticationFilter - JWT token validated for user: leone
+2025-10-19 17:09:12.683 [http-nio-8092-exec-9] DEBUG e.m.b.a.s.JwtAuthenticationFilter - JWT token validated for user: leone
+2025-10-19 17:09:12.684 [http-nio-8092-exec-7] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/tags
+2025-10-19 17:09:12.684 [http-nio-8092-exec-9] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/articles/feed?limit=10
+2025-10-19 17:09:12.684 [http-nio-8092-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/tags", parameters={}
+2025-10-19 17:09:12.684 [http-nio-8092-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to edu.miu.blog.app.controller.TagController#getTags()
+2025-10-19 17:09:12.684 [http-nio-8092-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/articles/feed?limit=10", parameters={masked}
+2025-10-19 17:09:12.684 [http-nio-8092-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to edu.miu.blog.app.controller.ArticleController#getFeed(int, int)
+2025-10-19 17:09:12.685 [http-nio-8092-exec-7] INFO  e.m.b.app.controller.TagController - Getting all tags
+2025-10-19 17:09:12.685 [http-nio-8092-exec-7] INFO  e.m.b.a.service.impl.TagServiceImpl - Getting all tags
+2025-10-19 17:09:12.686 [http-nio-8092-exec-9] INFO  e.m.b.a.controller.ArticleController - Getting feed for user with limit: 10, offset: 0
+2025-10-19 17:09:12.686 [http-nio-8092-exec-9] DEBUG e.m.b.a.controller.ArticleController - User requesting feed: leone
+2025-10-19 17:09:12.698 [http-nio-8092-exec-7] DEBUG org.hibernate.SQL - select t1_0.id,t1_0.name from tag t1_0
+2025-10-19 17:09:12.701 [http-nio-8092-exec-9] DEBUG org.hibernate.SQL - select u1_0.id,u1_0.bio,u1_0.email,u1_0.image,u1_0.password,u1_0.username from user u1_0 where u1_0.id=?
+2025-10-19 17:09:12.703 [http-nio-8092-exec-7] INFO  e.m.b.a.service.impl.TagServiceImpl - Retrieved 4 tags
+2025-10-19 17:09:12.703 [http-nio-8092-exec-7] INFO  e.m.b.app.controller.TagController - Retrieved 4 tags
+2025-10-19 17:09:12.705 [http-nio-8092-exec-7] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-10-19 17:09:12.705 [http-nio-8092-exec-7] DEBUG e.m.b.a.config.WrapperResponseAdvice - Processing response body for method: getTags
+2025-10-19 17:09:12.705 [http-nio-8092-exec-7] DEBUG e.m.b.a.config.WrapperResponseAdvice - No wrapping needed - returning response as-is
+2025-10-19 17:09:12.705 [http-nio-8092-exec-9] DEBUG org.hibernate.SQL - select f1_0.follower,f1_1.id,f1_1.bio,f1_1.email,f1_1.image,f1_1.password,f1_1.username from user_to_follower f1_0 join user f1_1 on f1_1.id=f1_0.following where f1_0.follower=?
+2025-10-19 17:09:12.705 [http-nio-8092-exec-7] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [TagsResponse(tags=[DSA, Ecuador, Morocco, SWE])]
+2025-10-19 17:09:12.707 [http-nio-8092-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-10-19 17:09:12.720 [http-nio-8092-exec-9] DEBUG org.hibernate.SQL - select a1_0.id,a1_0.author_id,a2_0.id,a2_0.bio,a2_0.email,a2_0.image,a2_0.password,a2_0.username,a1_0.body,a1_0.created_at,a1_0.description,a1_0.favorites_count,a1_0.locked_at,a1_0.locked_by,a1_0.slug,a1_0.tag_list,a1_0.title,a1_0.updated_at from article a1_0 join user a2_0 on a2_0.id=a1_0.author_id where a2_0.id in (?) order by a1_0.created_at desc,a1_0.created_at desc limit ?
+2025-10-19 17:09:12.727 [http-nio-8092-exec-9] INFO  e.m.b.a.controller.ArticleController - Feed contains 2 articles
+2025-10-19 17:09:12.729 [http-nio-8092-exec-9] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-10-19 17:09:12.729 [http-nio-8092-exec-9] DEBUG e.m.b.a.config.WrapperResponseAdvice - Processing response body for method: getFeed
+2025-10-19 17:09:12.729 [http-nio-8092-exec-9] DEBUG e.m.b.a.config.WrapperResponseAdvice - No wrapping needed - returning response as-is
+2025-10-19 17:09:12.731 [http-nio-8092-exec-9] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ArticleListResponse(articles=[ArticleResponse(id=3, slug=dsa-f21pnw, title=DSA, description=Data Str (truncated)...]
+2025-10-19 17:09:12.739 [http-nio-8092-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-10-19 17:10:01.677 [HikariPool-1:housekeeper] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7b0788a3 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2025-10-19 17:10:01.981 [HikariPool-1:housekeeper] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4094c18f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2025-10-19 17:10:06.816 [http-nio-8092-exec-1] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/users
+2025-10-19 17:10:06.816 [http-nio-8092-exec-1] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Processing request: GET /api/users
+2025-10-19 17:10:06.816 [http-nio-8092-exec-1] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Found Authorization header
+2025-10-19 17:10:06.816 [http-nio-8092-exec-1] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Resolving token from header
+2025-10-19 17:10:06.816 [http-nio-8092-exec-1] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Found Token header
+2025-10-19 17:10:06.816 [http-nio-8092-exec-1] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Validating JWT token
+2025-10-19 17:10:06.816 [http-nio-8092-exec-1] DEBUG edu.miu.blog.app.security.JwtUtil - Extracting claims from JWT token
+2025-10-19 17:10:06.818 [http-nio-8092-exec-1] DEBUG edu.miu.blog.app.security.JwtUtil - Successfully extracted claims from JWT token
+2025-10-19 17:10:06.818 [http-nio-8092-exec-1] DEBUG e.m.b.a.s.JwtAuthenticationFilter - JWT token validated for user: leone
+2025-10-19 17:10:06.818 [http-nio-8092-exec-1] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/users
+2025-10-19 17:10:06.818 [http-nio-8092-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/users", parameters={}
+2025-10-19 17:10:06.818 [http-nio-8092-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to edu.miu.blog.app.controller.UserController#findMe()
+2025-10-19 17:10:06.819 [http-nio-8092-exec-1] DEBUG e.m.b.app.controller.UserController - User requesting own profile: leone
+2025-10-19 17:10:06.819 [http-nio-8092-exec-1] DEBUG e.m.b.a.service.impl.UserServiceImpl - Finding user by email: leoz.31@hotmail.com
+2025-10-19 17:10:06.822 [http-nio-8092-exec-1] DEBUG org.hibernate.SQL - select u1_0.id,u1_0.bio,u1_0.email,u1_0.image,u1_0.password,u1_0.username from user u1_0 where u1_0.email=?
+2025-10-19 17:10:06.822 [http-nio-8092-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1db7e111 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2025-10-19 17:10:06.823 [http-nio-8092-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3b5e83f8 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2025-10-19 17:10:06.823 [http-nio-8092-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@407a8fea (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2025-10-19 17:10:06.824 [http-nio-8092-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7f2d0ce7 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2025-10-19 17:10:06.824 [http-nio-8092-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5b57fdaa (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2025-10-19 17:10:06.825 [http-nio-8092-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@14d9e47b (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2025-10-19 17:10:06.825 [http-nio-8092-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@483cd5 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2025-10-19 17:10:06.825 [http-nio-8092-exec-1] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1795520f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2025-10-19 17:10:06.858 [http-nio-8092-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/tags
+2025-10-19 17:10:06.858 [http-nio-8092-exec-3] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Processing request: GET /api/tags
+2025-10-19 17:10:06.858 [http-nio-8092-exec-3] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Found Authorization header
+2025-10-19 17:10:06.858 [http-nio-8092-exec-3] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Resolving token from header
+2025-10-19 17:10:06.858 [http-nio-8092-exec-3] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Found Token header
+2025-10-19 17:10:06.858 [http-nio-8092-exec-3] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Validating JWT token
+2025-10-19 17:10:06.858 [http-nio-8092-exec-3] DEBUG edu.miu.blog.app.security.JwtUtil - Extracting claims from JWT token
+2025-10-19 17:10:06.859 [http-nio-8092-exec-3] DEBUG edu.miu.blog.app.security.JwtUtil - Successfully extracted claims from JWT token
+2025-10-19 17:10:06.859 [http-nio-8092-exec-3] DEBUG e.m.b.a.s.JwtAuthenticationFilter - JWT token validated for user: leone
+2025-10-19 17:10:06.859 [http-nio-8092-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/tags
+2025-10-19 17:10:06.859 [http-nio-8092-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/tags", parameters={}
+2025-10-19 17:10:06.859 [http-nio-8092-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to edu.miu.blog.app.controller.TagController#getTags()
+2025-10-19 17:10:06.859 [http-nio-8092-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/articles?limit=10
+2025-10-19 17:10:06.859 [http-nio-8092-exec-5] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Processing request: GET /api/articles
+2025-10-19 17:10:06.859 [http-nio-8092-exec-5] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Found Authorization header
+2025-10-19 17:10:06.859 [http-nio-8092-exec-5] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Resolving token from header
+2025-10-19 17:10:06.859 [http-nio-8092-exec-5] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Found Token header
+2025-10-19 17:10:06.859 [http-nio-8092-exec-5] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Validating JWT token
+2025-10-19 17:10:06.859 [http-nio-8092-exec-5] DEBUG edu.miu.blog.app.security.JwtUtil - Extracting claims from JWT token
+2025-10-19 17:10:06.859 [http-nio-8092-exec-3] INFO  e.m.b.app.controller.TagController - Getting all tags
+2025-10-19 17:10:06.859 [http-nio-8092-exec-3] INFO  e.m.b.a.service.impl.TagServiceImpl - Getting all tags
+2025-10-19 17:10:06.860 [http-nio-8092-exec-5] DEBUG edu.miu.blog.app.security.JwtUtil - Successfully extracted claims from JWT token
+2025-10-19 17:10:06.860 [http-nio-8092-exec-5] DEBUG e.m.b.a.s.JwtAuthenticationFilter - JWT token validated for user: leone
+2025-10-19 17:10:06.860 [http-nio-8092-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/articles?limit=10
+2025-10-19 17:10:06.860 [http-nio-8092-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/articles?limit=10", parameters={masked}
+2025-10-19 17:10:06.860 [http-nio-8092-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to edu.miu.blog.app.controller.ArticleController#listArticles(String, String, String, int, int)
+2025-10-19 17:10:06.862 [http-nio-8092-exec-5] INFO  e.m.b.a.controller.ArticleController - Listing articles with filters - tag: null, author: null, favorited: null, limit: 10, offset: 0
+2025-10-19 17:10:06.862 [http-nio-8092-exec-5] DEBUG e.m.b.a.controller.ArticleController - User requesting articles: leone
+2025-10-19 17:10:06.862 [http-nio-8092-exec-5] INFO  e.m.b.a.s.impl.ArticleServiceImpl - Listing articles for user: 1 with params: tag=null, author=null, favorited=null, limit=10, offset=0
+2025-10-19 17:10:36.830 [http-nio-8092-exec-1] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+2025-10-19 17:10:36.831 [http-nio-8092-exec-1] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - HikariPool-1 - Connection is not available, request timed out after 30003ms (total=0, active=0, idle=0, waiting=2)
+2025-10-19 17:10:36.831 [http-nio-8092-exec-1] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2025-10-19 17:10:36.837 [http-nio-8092-exec-1] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler edu.miu.blog.app.error.GlobalControllerAdvice#globalExceptionHandler(Exception, WebRequest)
+2025-10-19 17:10:36.838 [http-nio-8092-exec-1] ERROR e.m.b.a.error.GlobalControllerAdvice - Unexpected error occurred: Unable to acquire JDBC Connection [HikariPool-1 - Connection is not available, request timed out after 30003ms (total=0, active=0, idle=0, waiting=2)] [n/a]
+org.springframework.dao.DataAccessResourceFailureException: Unable to acquire JDBC Connection [HikariPool-1 - Connection is not available, request timed out after 30003ms (total=0, active=0, idle=0, waiting=2)] [n/a]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:278)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:256)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:241)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:560)
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:343)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:160)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:136)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy3/jdk.proxy3.$Proxy153.findByEmail(Unknown Source)
+	at edu.miu.blog.app.service.impl.UserServiceImpl.findByEmail(UserServiceImpl.java:86)
+	at edu.miu.blog.app.controller.UserController.findMe(UserController.java:51)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:125)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at edu.miu.blog.app.security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:70)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:319)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$4(HandlerMappingIntrospector.java:267)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:240)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+Caused by: org.hibernate.exception.JDBCConnectionException: Unable to acquire JDBC Connection [HikariPool-1 - Connection is not available, request timed out after 30003ms (total=0, active=0, idle=0, waiting=2)] [n/a]
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:51)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.acquireConnectionIfNeeded(LogicalConnectionManagedImpl.java:129)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.getPhysicalConnection(LogicalConnectionManagedImpl.java:156)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl.connection(StatementPreparerImpl.java:56)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$4.doPrepare(StatementPreparerImpl.java:151)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$StatementPreparationTemplate.prepareStatement(StatementPreparerImpl.java:180)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl.prepareQueryStatement(StatementPreparerImpl.java:153)
+	at org.hibernate.sql.exec.internal.StandardStatementCreator.createStatement(StandardStatementCreator.java:49)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:236)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.getResultSet(DeferredResultSetAccess.java:172)
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.<init>(JdbcValuesResultSetImpl.java:74)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.resolveJdbcValuesSource(JdbcSelectExecutorStandardImpl.java:355)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.doExecuteQuery(JdbcSelectExecutorStandardImpl.java:137)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.executeQuery(JdbcSelectExecutorStandardImpl.java:102)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.executeQuery(JdbcSelectExecutor.java:91)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:165)
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.lambda$new$1(ConcreteSqmSelectQueryPlan.java:149)
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.withCacheableSqmInterpretation(ConcreteSqmSelectQueryPlan.java:439)
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.performList(ConcreteSqmSelectQueryPlan.java:359)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.doList(QuerySqmImpl.java:380)
+	at org.hibernate.query.spi.AbstractSelectionQuery.list(AbstractSelectionQuery.java:143)
+	at org.hibernate.query.spi.AbstractSelectionQuery.getSingleResult(AbstractSelectionQuery.java:275)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$SingleEntityExecution.doExecute(JpaQueryExecution.java:224)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:93)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:160)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:148)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:170)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:149)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:69)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	... 115 common frames omitted
+Caused by: java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available, request timed out after 30003ms (total=0, active=0, idle=0, waiting=2)
+	at com.zaxxer.hikari.pool.HikariPool.createTimeoutException(HikariPool.java:714)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:184)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:142)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:127)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:126)
+	at org.hibernate.internal.NonContextualJdbcConnectionAccess.obtainConnection(NonContextualJdbcConnectionAccess.java:46)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.acquireConnectionIfNeeded(LogicalConnectionManagedImpl.java:126)
+	... 150 common frames omitted
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:175)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:446)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:239)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:188)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:368)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:205)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:752)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:731)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1095)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:619)
+	... 1 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:62)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:150)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:166)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:121)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:945)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815)
+	... 13 common frames omitted
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:628)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:533)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:583)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:282)
+	at java.base/java.net.Socket.connect(Socket.java:665)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63)
+	... 16 common frames omitted
+2025-10-19 17:10:36.842 [http-nio-8092-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-10-19 17:10:36.842 [http-nio-8092-exec-1] DEBUG e.m.b.a.config.WrapperResponseAdvice - Processing response body for method: globalExceptionHandler
+2025-10-19 17:10:36.842 [http-nio-8092-exec-1] DEBUG e.m.b.a.config.WrapperResponseAdvice - Wrapping response with key: errors
+2025-10-19 17:10:36.842 [http-nio-8092-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{errors=edu.miu.blog.app.error.ErrorMessage@680a693}]
+2025-10-19 17:10:36.843 [http-nio-8092-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.dao.DataAccessResourceFailureException: Unable to acquire JDBC Connection [HikariPool-1 - Connection is not available, request timed out after 30003ms (total=0, active=0, idle=0, waiting=2)] [n/a]]
+2025-10-19 17:10:36.843 [http-nio-8092-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 500 INTERNAL_SERVER_ERROR
+2025-10-19 17:10:36.862 [http-nio-8092-exec-3] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+2025-10-19 17:10:36.862 [http-nio-8092-exec-3] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - HikariPool-1 - Connection is not available, request timed out after 30002ms (total=0, active=0, idle=0, waiting=1)
+2025-10-19 17:10:36.862 [http-nio-8092-exec-3] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2025-10-19 17:10:36.863 [http-nio-8092-exec-3] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler edu.miu.blog.app.error.GlobalControllerAdvice#globalExceptionHandler(Exception, WebRequest)
+2025-10-19 17:10:36.863 [http-nio-8092-exec-3] ERROR e.m.b.a.error.GlobalControllerAdvice - Unexpected error occurred: Could not open JPA EntityManager for transaction
+org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:466)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:532)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:405)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:639)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:374)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:165)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy3/jdk.proxy3.$Proxy151.findAll(Unknown Source)
+	at edu.miu.blog.app.service.impl.TagServiceImpl.getAllTags(TagServiceImpl.java:27)
+	at edu.miu.blog.app.controller.TagController.getTags(TagController.java:23)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:125)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at edu.miu.blog.app.security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:70)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:319)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$4(HandlerMappingIntrospector.java:267)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:240)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+Caused by: org.hibernate.exception.JDBCConnectionException: Unable to acquire JDBC Connection [HikariPool-1 - Connection is not available, request timed out after 30002ms (total=0, active=0, idle=0, waiting=1)] [n/a]
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:51)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.acquireConnectionIfNeeded(LogicalConnectionManagedImpl.java:129)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.getPhysicalConnection(LogicalConnectionManagedImpl.java:156)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.beginTransaction(HibernateJpaDialect.java:164)
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:420)
+	... 122 common frames omitted
+Caused by: java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available, request timed out after 30002ms (total=0, active=0, idle=0, waiting=1)
+	at com.zaxxer.hikari.pool.HikariPool.createTimeoutException(HikariPool.java:714)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:184)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:142)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:127)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:126)
+	at org.hibernate.internal.NonContextualJdbcConnectionAccess.obtainConnection(NonContextualJdbcConnectionAccess.java:46)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.acquireConnectionIfNeeded(LogicalConnectionManagedImpl.java:126)
+	... 125 common frames omitted
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:175)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:446)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:239)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:188)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:368)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:205)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:752)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:731)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1095)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:619)
+	... 1 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:62)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:150)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:166)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:121)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:945)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815)
+	... 13 common frames omitted
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:628)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:533)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:583)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:282)
+	at java.base/java.net.Socket.connect(Socket.java:665)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63)
+	... 16 common frames omitted
+2025-10-19 17:10:36.864 [http-nio-8092-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-10-19 17:10:36.864 [http-nio-8092-exec-3] DEBUG e.m.b.a.config.WrapperResponseAdvice - Processing response body for method: globalExceptionHandler
+2025-10-19 17:10:36.864 [http-nio-8092-exec-3] DEBUG e.m.b.a.config.WrapperResponseAdvice - Wrapping response with key: errors
+2025-10-19 17:10:36.864 [http-nio-8092-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{errors=edu.miu.blog.app.error.ErrorMessage@15821861}]
+2025-10-19 17:10:36.865 [http-nio-8092-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction]
+2025-10-19 17:10:36.865 [http-nio-8092-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 500 INTERNAL_SERVER_ERROR
+2025-10-19 17:10:36.865 [http-nio-8092-exec-5] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 08S01
+2025-10-19 17:10:36.866 [http-nio-8092-exec-5] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - HikariPool-1 - Connection is not available, request timed out after 30002ms (total=0, active=0, idle=0, waiting=0)
+2025-10-19 17:10:36.866 [http-nio-8092-exec-5] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2025-10-19 17:10:36.867 [http-nio-8092-exec-5] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler edu.miu.blog.app.error.GlobalControllerAdvice#globalExceptionHandler(Exception, WebRequest)
+2025-10-19 17:10:36.867 [http-nio-8092-exec-5] ERROR e.m.b.a.error.GlobalControllerAdvice - Unexpected error occurred: Could not open JPA EntityManager for transaction
+org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:466)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.startTransaction(AbstractPlatformTransactionManager.java:532)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:405)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:639)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:374)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:165)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy3/jdk.proxy3.$Proxy150.findAll(Unknown Source)
+	at edu.miu.blog.app.service.impl.ArticleServiceImpl.listArticles(ArticleServiceImpl.java:160)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:724)
+	at edu.miu.blog.app.service.impl.ArticleServiceImpl$$SpringCGLIB$$0.listArticles(<generated>)
+	at edu.miu.blog.app.controller.ArticleController.listArticles(ArticleController.java:75)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:125)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at edu.miu.blog.app.security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:70)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:319)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$4(HandlerMappingIntrospector.java:267)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:240)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+Caused by: org.hibernate.exception.JDBCConnectionException: Unable to acquire JDBC Connection [HikariPool-1 - Connection is not available, request timed out after 30002ms (total=0, active=0, idle=0, waiting=0)] [n/a]
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:51)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.acquireConnectionIfNeeded(LogicalConnectionManagedImpl.java:129)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.getPhysicalConnection(LogicalConnectionManagedImpl.java:156)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.beginTransaction(HibernateJpaDialect.java:164)
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:420)
+	... 127 common frames omitted
+Caused by: java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available, request timed out after 30002ms (total=0, active=0, idle=0, waiting=0)
+	at com.zaxxer.hikari.pool.HikariPool.createTimeoutException(HikariPool.java:714)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:184)
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:142)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:127)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:126)
+	at org.hibernate.internal.NonContextualJdbcConnectionAccess.obtainConnection(NonContextualJdbcConnectionAccess.java:46)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.acquireConnectionIfNeeded(LogicalConnectionManagedImpl.java:126)
+	... 130 common frames omitted
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:175)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:446)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:239)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:188)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:368)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:205)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:752)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:731)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1095)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:619)
+	... 1 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:62)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:150)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:166)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:121)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:945)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815)
+	... 13 common frames omitted
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:628)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:533)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:583)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:282)
+	at java.base/java.net.Socket.connect(Socket.java:665)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63)
+	... 16 common frames omitted
+2025-10-19 17:10:36.869 [http-nio-8092-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-10-19 17:10:36.869 [http-nio-8092-exec-5] DEBUG e.m.b.a.config.WrapperResponseAdvice - Processing response body for method: globalExceptionHandler
+2025-10-19 17:10:36.869 [http-nio-8092-exec-5] DEBUG e.m.b.a.config.WrapperResponseAdvice - Wrapping response with key: errors
+2025-10-19 17:10:36.869 [http-nio-8092-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{errors=edu.miu.blog.app.error.ErrorMessage@46d575c3}]
+2025-10-19 17:10:36.869 [http-nio-8092-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction]
+2025-10-19 17:10:36.869 [http-nio-8092-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 500 INTERNAL_SERVER_ERROR
+2025-10-19 17:46:09.307 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-19 17:46:09.313 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-10-19 17:46:09.316 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-19 17:46:09.319 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-10-19 17:46:09.320 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-10-19 17:47:53.587 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-10-19 17:47:53.611 [restartedMain] INFO  e.m.b.app.MiuBlogBackendApplication - Starting MiuBlogBackendApplication v0.0.1 using Java 24.0.1 with PID 64011 (/Users/leone/Documents/MIU/swe-final-project/miu-blog-backend/build/classes/java/main started by leone in /Users/leone/Documents/MIU/swe-final-project/miu-blog-backend)
+2025-10-19 17:47:53.611 [restartedMain] DEBUG e.m.b.app.MiuBlogBackendApplication - Running with Spring Boot v3.5.4, Spring v6.2.9
+2025-10-19 17:47:53.612 [restartedMain] INFO  e.m.b.app.MiuBlogBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-10-19 17:47:53.644 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-19 17:47:53.644 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-19 17:47:54.033 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-19 17:47:54.070 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 33 ms. Found 4 JPA repository interfaces.
+2025-10-19 17:47:54.393 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8092 (http)
+2025-10-19 17:47:54.408 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8092"]
+2025-10-19 17:47:54.410 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-10-19 17:47:54.410 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-10-19 17:47:54.439 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-10-19 17:47:54.439 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 795 ms
+2025-10-19 17:47:54.442 [restartedMain] INFO  e.m.blog.app.config.GlobalCorsConfig - Configuring CORS filter
+2025-10-19 17:47:54.446 [restartedMain] INFO  e.m.blog.app.config.GlobalCorsConfig - CORS filter configured successfully
+2025-10-19 17:47:54.455 [restartedMain] INFO  edu.miu.blog.app.security.JwtUtil - Initializing JWT utility with secret key
+2025-10-19 17:47:54.478 [restartedMain] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2025-10-19 17:47:54.479 [restartedMain] DEBUG o.s.web.filter.CorsFilter - Filter 'customCorsFilter' configured for use
+2025-10-19 17:47:54.539 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-19 17:47:54.558 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-10-19 17:47:54.572 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-10-19 17:47:54.685 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-19 17:47:54.699 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-10-19 17:47:54.781 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@ef74b8c
+2025-10-19 17:47:54.782 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-10-19 17:47:54.805 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-19 17:47:54.814 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.43
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-19 17:47:55.262 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-19 17:47:55.329 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-19 17:47:55.487 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-19 17:47:55.834 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-19 17:47:55.846 [restartedMain] INFO  edu.miu.blog.app.config.WebConfig - Configuring CORS mappings
+2025-10-19 17:47:55.847 [restartedMain] INFO  edu.miu.blog.app.config.WebConfig - CORS mappings configured successfully
+2025-10-19 17:47:55.876 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 18 mappings in 'requestMappingHandlerMapping'
+2025-10-19 17:47:55.896 [restartedMain] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-10-19 17:47:55.906 [restartedMain] INFO  e.m.blog.app.security.SecurityConfig - Creating BCrypt password encoder
+2025-10-19 17:47:55.906 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: f6494cca-f935-402a-96db-f6cc89879a70
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-10-19 17:47:55.909 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-10-19 17:47:55.928 [restartedMain] INFO  e.m.blog.app.security.SecurityConfig - Configuring security filter chain
+2025-10-19 17:47:55.940 [restartedMain] INFO  e.m.blog.app.security.SecurityConfig - Security configuration completed
+2025-10-19 17:47:55.947 [restartedMain] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-10-19 17:47:55.978 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 2 RequestBodyAdvice, 2 ResponseBodyAdvice
+2025-10-19 17:47:55.998 [restartedMain] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 2 ResponseBodyAdvice
+2025-10-19 17:47:56.039 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-10-19 17:47:56.046 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8092"]
+2025-10-19 17:47:56.053 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8092 (http) with context path '/'
+2025-10-19 17:47:56.060 [restartedMain] INFO  e.m.b.app.MiuBlogBackendApplication - Started MiuBlogBackendApplication in 2.942 seconds (process running for 3.18)
+2025-10-19 17:47:56.061 [restartedMain] INFO  e.m.b.app.MiuBlogBackendApplication - MIU Blog Backend Application started successfully
+2025-10-19 17:56:40.534 [http-nio-8092-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-19 17:56:40.535 [http-nio-8092-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-10-19 17:56:40.535 [http-nio-8092-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2025-10-19 17:56:40.535 [http-nio-8092-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2025-10-19 17:56:40.535 [http-nio-8092-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2025-10-19 17:56:40.537 [http-nio-8092-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@22878208
+2025-10-19 17:56:40.537 [http-nio-8092-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@4ea66a98
+2025-10-19 17:56:40.538 [http-nio-8092-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-10-19 17:56:40.538 [http-nio-8092-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2025-10-19 17:56:40.570 [http-nio-8092-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/users
+2025-10-19 17:56:40.570 [http-nio-8092-exec-4] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/articles?limit=10
+2025-10-19 17:56:40.570 [http-nio-8092-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/tags
+2025-10-19 17:56:40.573 [http-nio-8092-exec-6] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Processing request: GET /api/tags
+2025-10-19 17:56:40.573 [http-nio-8092-exec-4] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Processing request: GET /api/articles
+2025-10-19 17:56:40.573 [http-nio-8092-exec-5] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Processing request: GET /api/users
+2025-10-19 17:56:40.573 [http-nio-8092-exec-6] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Found Authorization header
+2025-10-19 17:56:40.573 [http-nio-8092-exec-4] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Found Authorization header
+2025-10-19 17:56:40.573 [http-nio-8092-exec-4] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Resolving token from header
+2025-10-19 17:56:40.573 [http-nio-8092-exec-6] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Resolving token from header
+2025-10-19 17:56:40.573 [http-nio-8092-exec-5] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Found Authorization header
+2025-10-19 17:56:40.573 [http-nio-8092-exec-4] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Found Token header
+2025-10-19 17:56:40.573 [http-nio-8092-exec-5] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Resolving token from header
+2025-10-19 17:56:40.573 [http-nio-8092-exec-6] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Found Token header
+2025-10-19 17:56:40.573 [http-nio-8092-exec-5] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Found Token header
+2025-10-19 17:56:40.573 [http-nio-8092-exec-4] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Validating JWT token
+2025-10-19 17:56:40.573 [http-nio-8092-exec-5] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Validating JWT token
+2025-10-19 17:56:40.573 [http-nio-8092-exec-6] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Validating JWT token
+2025-10-19 17:56:40.573 [http-nio-8092-exec-5] DEBUG edu.miu.blog.app.security.JwtUtil - Extracting claims from JWT token
+2025-10-19 17:56:40.573 [http-nio-8092-exec-6] DEBUG edu.miu.blog.app.security.JwtUtil - Extracting claims from JWT token
+2025-10-19 17:56:40.573 [http-nio-8092-exec-4] DEBUG edu.miu.blog.app.security.JwtUtil - Extracting claims from JWT token
+2025-10-19 17:56:40.648 [http-nio-8092-exec-6] DEBUG edu.miu.blog.app.security.JwtUtil - Successfully extracted claims from JWT token
+2025-10-19 17:56:40.650 [http-nio-8092-exec-4] DEBUG edu.miu.blog.app.security.JwtUtil - Successfully extracted claims from JWT token
+2025-10-19 17:56:40.651 [http-nio-8092-exec-4] DEBUG e.m.b.a.s.JwtAuthenticationFilter - JWT token validated for user: leone
+2025-10-19 17:56:40.652 [http-nio-8092-exec-5] DEBUG edu.miu.blog.app.security.JwtUtil - Successfully extracted claims from JWT token
+2025-10-19 17:56:40.652 [http-nio-8092-exec-5] DEBUG e.m.b.a.s.JwtAuthenticationFilter - JWT token validated for user: leone
+2025-10-19 17:56:40.651 [http-nio-8092-exec-6] DEBUG e.m.b.a.s.JwtAuthenticationFilter - JWT token validated for user: leone
+2025-10-19 17:56:40.663 [http-nio-8092-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/users
+2025-10-19 17:56:40.663 [http-nio-8092-exec-4] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/articles?limit=10
+2025-10-19 17:56:40.668 [http-nio-8092-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/tags
+2025-10-19 17:56:40.669 [http-nio-8092-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/users", parameters={}
+2025-10-19 17:56:40.669 [http-nio-8092-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/tags", parameters={}
+2025-10-19 17:56:40.669 [http-nio-8092-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/articles?limit=10", parameters={masked}
+2025-10-19 17:56:40.675 [http-nio-8092-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to edu.miu.blog.app.controller.TagController#getTags()
+2025-10-19 17:56:40.675 [http-nio-8092-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to edu.miu.blog.app.controller.UserController#findMe()
+2025-10-19 17:56:40.675 [http-nio-8092-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to edu.miu.blog.app.controller.ArticleController#listArticles(String, String, String, int, int)
+2025-10-19 17:56:40.723 [http-nio-8092-exec-6] INFO  e.m.b.app.controller.TagController - Getting all tags
+2025-10-19 17:56:40.724 [http-nio-8092-exec-6] INFO  e.m.b.a.service.impl.TagServiceImpl - Getting all tags
+2025-10-19 17:56:40.729 [http-nio-8092-exec-5] DEBUG e.m.b.app.controller.UserController - User requesting own profile: leone
+2025-10-19 17:56:40.729 [http-nio-8092-exec-5] DEBUG e.m.b.a.service.impl.UserServiceImpl - Finding user by email: leoz.31@hotmail.com
+2025-10-19 17:56:40.745 [http-nio-8092-exec-4] INFO  e.m.b.a.controller.ArticleController - Listing articles with filters - tag: null, author: null, favorited: null, limit: 10, offset: 0
+2025-10-19 17:56:40.745 [http-nio-8092-exec-4] DEBUG e.m.b.a.controller.ArticleController - User requesting articles: leone
+2025-10-19 17:56:40.747 [http-nio-8092-exec-4] INFO  e.m.b.a.s.impl.ArticleServiceImpl - Listing articles for user: 1 with params: tag=null, author=null, favorited=null, limit=10, offset=0
+2025-10-19 17:56:40.808 [http-nio-8092-exec-6] DEBUG org.hibernate.SQL - select t1_0.id,t1_0.name from tag t1_0
+2025-10-19 17:56:40.808 [http-nio-8092-exec-4] DEBUG org.hibernate.SQL - select a1_0.id,a1_0.author_id,a1_0.body,a1_0.created_at,a1_0.description,a1_0.favorites_count,a1_0.locked_at,a1_0.locked_by,a1_0.slug,a1_0.tag_list,a1_0.title,a1_0.updated_at from article a1_0 order by a1_0.created_at desc limit ?,?
+2025-10-19 17:56:40.808 [http-nio-8092-exec-5] DEBUG org.hibernate.SQL - select u1_0.id,u1_0.bio,u1_0.email,u1_0.image,u1_0.password,u1_0.username from user u1_0 where u1_0.email=?
+2025-10-19 17:56:40.849 [http-nio-8092-exec-5] DEBUG e.m.b.a.service.impl.UserServiceImpl - User found: leone
+2025-10-19 17:56:40.850 [http-nio-8092-exec-5] DEBUG edu.miu.blog.app.security.JwtUtil - Generating JWT token for user: leone
+2025-10-19 17:56:40.852 [http-nio-8092-exec-6] INFO  e.m.b.a.service.impl.TagServiceImpl - Retrieved 4 tags
+2025-10-19 17:56:40.853 [http-nio-8092-exec-6] INFO  e.m.b.app.controller.TagController - Retrieved 4 tags
+2025-10-19 17:56:40.857 [http-nio-8092-exec-4] INFO  e.m.b.a.s.impl.ArticleServiceImpl - Found 5 articles out of 5 total
+2025-10-19 17:56:40.860 [http-nio-8092-exec-4] DEBUG org.hibernate.SQL - select u1_0.id,u1_0.bio,u1_0.email,u1_0.image,u1_0.password,u1_0.username from user u1_0 where u1_0.id=?
+2025-10-19 17:56:40.864 [http-nio-8092-exec-4] DEBUG org.hibernate.SQL - select u1_0.id,u1_0.bio,u1_0.email,u1_0.image,u1_0.password,u1_0.username from user u1_0 where u1_0.id=?
+2025-10-19 17:56:40.867 [http-nio-8092-exec-4] DEBUG org.hibernate.SQL - select u1_0.id,u1_0.bio,u1_0.email,u1_0.image,u1_0.password,u1_0.username from user u1_0 where u1_0.id=?
+2025-10-19 17:56:40.869 [http-nio-8092-exec-4] DEBUG org.hibernate.SQL - select u1_0.id,u1_0.bio,u1_0.email,u1_0.image,u1_0.password,u1_0.username from user u1_0 where u1_0.id=?
+2025-10-19 17:56:40.871 [http-nio-8092-exec-4] INFO  e.m.b.a.controller.ArticleController - Found 5 articles
+2025-10-19 17:56:40.874 [http-nio-8092-exec-5] DEBUG edu.miu.blog.app.security.JwtUtil - JWT token generated successfully for user: leone
+2025-10-19 17:56:40.874 [http-nio-8092-exec-5] DEBUG e.m.b.app.controller.UserController - Profile retrieved for user: leone
+2025-10-19 17:56:40.877 [http-nio-8092-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-10-19 17:56:40.878 [http-nio-8092-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-10-19 17:56:40.877 [http-nio-8092-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-10-19 17:56:40.878 [http-nio-8092-exec-4] DEBUG e.m.b.a.config.WrapperResponseAdvice - Processing response body for method: listArticles
+2025-10-19 17:56:40.878 [http-nio-8092-exec-5] DEBUG e.m.b.a.config.WrapperResponseAdvice - Processing response body for method: findMe
+2025-10-19 17:56:40.878 [http-nio-8092-exec-5] DEBUG e.m.b.a.config.WrapperResponseAdvice - No wrapping needed - returning response as-is
+2025-10-19 17:56:40.878 [http-nio-8092-exec-4] DEBUG e.m.b.a.config.WrapperResponseAdvice - No wrapping needed - returning response as-is
+2025-10-19 17:56:40.879 [http-nio-8092-exec-6] DEBUG e.m.b.a.config.WrapperResponseAdvice - Processing response body for method: getTags
+2025-10-19 17:56:40.879 [http-nio-8092-exec-6] DEBUG e.m.b.a.config.WrapperResponseAdvice - No wrapping needed - returning response as-is
+2025-10-19 17:56:40.879 [http-nio-8092-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [TagsResponse(tags=[DSA, Ecuador, Morocco, SWE])]
+2025-10-19 17:56:40.881 [http-nio-8092-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [UserResponse(id=null, email=leoz.31@hotmail.com, token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJsZW96LjMxQGhv (truncated)...]
+2025-10-19 17:56:40.883 [http-nio-8092-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ArticleListResponse(articles=[ArticleResponse(id=5, slug=the-essence-of-software-engineering-me7hv7, (truncated)...]
+2025-10-19 17:56:40.886 [http-nio-8092-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-10-19 17:56:40.886 [http-nio-8092-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-10-19 17:56:40.896 [http-nio-8092-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-10-19 17:56:40.910 [http-nio-8092-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/articles/feed?limit=10
+2025-10-19 17:56:40.911 [http-nio-8092-exec-8] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Processing request: GET /api/articles/feed
+2025-10-19 17:56:40.911 [http-nio-8092-exec-8] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Found Authorization header
+2025-10-19 17:56:40.911 [http-nio-8092-exec-8] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Resolving token from header
+2025-10-19 17:56:40.911 [http-nio-8092-exec-8] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Found Token header
+2025-10-19 17:56:40.911 [http-nio-8092-exec-8] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Validating JWT token
+2025-10-19 17:56:40.911 [http-nio-8092-exec-8] DEBUG edu.miu.blog.app.security.JwtUtil - Extracting claims from JWT token
+2025-10-19 17:56:40.912 [http-nio-8092-exec-8] DEBUG edu.miu.blog.app.security.JwtUtil - Successfully extracted claims from JWT token
+2025-10-19 17:56:40.912 [http-nio-8092-exec-8] DEBUG e.m.b.a.s.JwtAuthenticationFilter - JWT token validated for user: leone
+2025-10-19 17:56:40.913 [http-nio-8092-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/articles/feed?limit=10
+2025-10-19 17:56:40.913 [http-nio-8092-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/articles/feed?limit=10", parameters={masked}
+2025-10-19 17:56:40.914 [http-nio-8092-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to edu.miu.blog.app.controller.ArticleController#getFeed(int, int)
+2025-10-19 17:56:40.917 [http-nio-8092-exec-8] INFO  e.m.b.a.controller.ArticleController - Getting feed for user with limit: 10, offset: 0
+2025-10-19 17:56:40.917 [http-nio-8092-exec-8] DEBUG e.m.b.a.controller.ArticleController - User requesting feed: leone
+2025-10-19 17:56:40.930 [http-nio-8092-exec-8] DEBUG org.hibernate.SQL - select u1_0.id,u1_0.bio,u1_0.email,u1_0.image,u1_0.password,u1_0.username from user u1_0 where u1_0.id=?
+2025-10-19 17:56:40.941 [http-nio-8092-exec-8] DEBUG org.hibernate.SQL - select f1_0.follower,f1_1.id,f1_1.bio,f1_1.email,f1_1.image,f1_1.password,f1_1.username from user_to_follower f1_0 join user f1_1 on f1_1.id=f1_0.following where f1_0.follower=?
+2025-10-19 17:56:40.960 [http-nio-8092-exec-8] DEBUG org.hibernate.SQL - select a1_0.id,a1_0.author_id,a2_0.id,a2_0.bio,a2_0.email,a2_0.image,a2_0.password,a2_0.username,a1_0.body,a1_0.created_at,a1_0.description,a1_0.favorites_count,a1_0.locked_at,a1_0.locked_by,a1_0.slug,a1_0.tag_list,a1_0.title,a1_0.updated_at from article a1_0 join user a2_0 on a2_0.id=a1_0.author_id where a2_0.id in (?) order by a1_0.created_at desc,a1_0.created_at desc limit ?
+2025-10-19 17:56:40.964 [http-nio-8092-exec-8] INFO  e.m.b.a.controller.ArticleController - Feed contains 2 articles
+2025-10-19 17:56:40.965 [http-nio-8092-exec-8] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-10-19 17:56:40.966 [http-nio-8092-exec-8] DEBUG e.m.b.a.config.WrapperResponseAdvice - Processing response body for method: getFeed
+2025-10-19 17:56:40.966 [http-nio-8092-exec-8] DEBUG e.m.b.a.config.WrapperResponseAdvice - No wrapping needed - returning response as-is
+2025-10-19 17:56:40.966 [http-nio-8092-exec-8] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ArticleListResponse(articles=[ArticleResponse(id=3, slug=dsa-f21pnw, title=DSA, description=Data Str (truncated)...]
+2025-10-19 17:56:40.968 [http-nio-8092-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-10-19 17:56:45.509 [http-nio-8092-exec-10] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/articles/roaster
+2025-10-19 17:56:45.509 [http-nio-8092-exec-10] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Processing request: GET /api/articles/roaster
+2025-10-19 17:56:45.509 [http-nio-8092-exec-10] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Found Authorization header
+2025-10-19 17:56:45.509 [http-nio-8092-exec-10] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Resolving token from header
+2025-10-19 17:56:45.509 [http-nio-8092-exec-10] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Found Token header
+2025-10-19 17:56:45.509 [http-nio-8092-exec-10] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Validating JWT token
+2025-10-19 17:56:45.509 [http-nio-8092-exec-10] DEBUG edu.miu.blog.app.security.JwtUtil - Extracting claims from JWT token
+2025-10-19 17:56:45.510 [http-nio-8092-exec-10] DEBUG edu.miu.blog.app.security.JwtUtil - Successfully extracted claims from JWT token
+2025-10-19 17:56:45.511 [http-nio-8092-exec-10] DEBUG e.m.b.a.s.JwtAuthenticationFilter - JWT token validated for user: leone
+2025-10-19 17:56:45.511 [http-nio-8092-exec-10] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/articles/roaster
+2025-10-19 17:56:45.511 [http-nio-8092-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/articles/roaster", parameters={}
+2025-10-19 17:56:45.511 [http-nio-8092-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to edu.miu.blog.app.controller.ArticleController#getRoasterUsers(int, int)
+2025-10-19 17:56:45.513 [http-nio-8092-exec-10] INFO  e.m.b.a.controller.ArticleController - Getting roaster users with limit: 20, offset: 0
+2025-10-19 17:56:45.527 [http-nio-8092-exec-10] DEBUG org.hibernate.SQL - SELECT u.id AS id, u.username AS username, COUNT(DISTINCT a.id) AS totalArticlesWritten, COALESCE(COUNT(uf.article_id), 0) AS totalLikesReceived, MIN(a.created_at) AS firstArticleDate FROM article a LEFT JOIN user u ON a.author_id = u.id LEFT JOIN user_favorites uf ON uf.article_id = a.id GROUP BY u.id, u.username ORDER BY totalLikesReceived DESC LIMIT ? OFFSET ?
+2025-10-19 17:56:45.536 [http-nio-8092-exec-10] INFO  e.m.b.a.controller.ArticleController - Found 4 roaster users
+2025-10-19 17:56:45.537 [http-nio-8092-exec-10] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-10-19 17:56:45.537 [http-nio-8092-exec-10] DEBUG e.m.b.a.config.WrapperResponseAdvice - Processing response body for method: getRoasterUsers
+2025-10-19 17:56:45.537 [http-nio-8092-exec-10] DEBUG e.m.b.a.config.WrapperResponseAdvice - Wrapping response with key: roaster
+2025-10-19 17:56:45.538 [http-nio-8092-exec-10] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{roaster=[{username=leone, totalArticlesWritten=1, id=1, totalLikesReceived=0, firstArticleDate=2025 (truncated)...]
+2025-10-19 17:56:45.542 [http-nio-8092-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-10-19 17:56:51.603 [http-nio-8092-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/tags
+2025-10-19 17:56:51.603 [http-nio-8092-exec-3] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Processing request: GET /api/tags
+2025-10-19 17:56:51.603 [http-nio-8092-exec-3] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Found Authorization header
+2025-10-19 17:56:51.603 [http-nio-8092-exec-3] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Resolving token from header
+2025-10-19 17:56:51.604 [http-nio-8092-exec-3] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Found Token header
+2025-10-19 17:56:51.604 [http-nio-8092-exec-3] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Validating JWT token
+2025-10-19 17:56:51.604 [http-nio-8092-exec-3] DEBUG edu.miu.blog.app.security.JwtUtil - Extracting claims from JWT token
+2025-10-19 17:56:51.604 [http-nio-8092-exec-3] DEBUG edu.miu.blog.app.security.JwtUtil - Successfully extracted claims from JWT token
+2025-10-19 17:56:51.604 [http-nio-8092-exec-3] DEBUG e.m.b.a.s.JwtAuthenticationFilter - JWT token validated for user: leone
+2025-10-19 17:56:51.605 [http-nio-8092-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/tags
+2025-10-19 17:56:51.605 [http-nio-8092-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/tags", parameters={}
+2025-10-19 17:56:51.605 [http-nio-8092-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/articles/feed?limit=10
+2025-10-19 17:56:51.605 [http-nio-8092-exec-5] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Processing request: GET /api/articles/feed
+2025-10-19 17:56:51.605 [http-nio-8092-exec-5] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Found Authorization header
+2025-10-19 17:56:51.605 [http-nio-8092-exec-5] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Resolving token from header
+2025-10-19 17:56:51.605 [http-nio-8092-exec-5] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Found Token header
+2025-10-19 17:56:51.605 [http-nio-8092-exec-5] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Validating JWT token
+2025-10-19 17:56:51.605 [http-nio-8092-exec-5] DEBUG edu.miu.blog.app.security.JwtUtil - Extracting claims from JWT token
+2025-10-19 17:56:51.605 [http-nio-8092-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to edu.miu.blog.app.controller.TagController#getTags()
+2025-10-19 17:56:51.605 [http-nio-8092-exec-3] INFO  e.m.b.app.controller.TagController - Getting all tags
+2025-10-19 17:56:51.605 [http-nio-8092-exec-5] DEBUG edu.miu.blog.app.security.JwtUtil - Successfully extracted claims from JWT token
+2025-10-19 17:56:51.605 [http-nio-8092-exec-3] INFO  e.m.b.a.service.impl.TagServiceImpl - Getting all tags
+2025-10-19 17:56:51.605 [http-nio-8092-exec-5] DEBUG e.m.b.a.s.JwtAuthenticationFilter - JWT token validated for user: leone
+2025-10-19 17:56:51.605 [http-nio-8092-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/articles/feed?limit=10
+2025-10-19 17:56:51.605 [http-nio-8092-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/articles/feed?limit=10", parameters={masked}
+2025-10-19 17:56:51.606 [http-nio-8092-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to edu.miu.blog.app.controller.ArticleController#getFeed(int, int)
+2025-10-19 17:56:51.606 [http-nio-8092-exec-5] INFO  e.m.b.a.controller.ArticleController - Getting feed for user with limit: 10, offset: 0
+2025-10-19 17:56:51.606 [http-nio-8092-exec-5] DEBUG e.m.b.a.controller.ArticleController - User requesting feed: leone
+2025-10-19 17:56:51.609 [http-nio-8092-exec-3] DEBUG org.hibernate.SQL - select t1_0.id,t1_0.name from tag t1_0
+2025-10-19 17:56:51.609 [http-nio-8092-exec-5] DEBUG org.hibernate.SQL - select u1_0.id,u1_0.bio,u1_0.email,u1_0.image,u1_0.password,u1_0.username from user u1_0 where u1_0.id=?
+2025-10-19 17:56:51.613 [http-nio-8092-exec-3] INFO  e.m.b.a.service.impl.TagServiceImpl - Retrieved 4 tags
+2025-10-19 17:56:51.613 [http-nio-8092-exec-5] DEBUG org.hibernate.SQL - select f1_0.follower,f1_1.id,f1_1.bio,f1_1.email,f1_1.image,f1_1.password,f1_1.username from user_to_follower f1_0 join user f1_1 on f1_1.id=f1_0.following where f1_0.follower=?
+2025-10-19 17:56:51.614 [http-nio-8092-exec-3] INFO  e.m.b.app.controller.TagController - Retrieved 4 tags
+2025-10-19 17:56:51.614 [http-nio-8092-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-10-19 17:56:51.614 [http-nio-8092-exec-3] DEBUG e.m.b.a.config.WrapperResponseAdvice - Processing response body for method: getTags
+2025-10-19 17:56:51.614 [http-nio-8092-exec-3] DEBUG e.m.b.a.config.WrapperResponseAdvice - No wrapping needed - returning response as-is
+2025-10-19 17:56:51.614 [http-nio-8092-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [TagsResponse(tags=[DSA, Ecuador, Morocco, SWE])]
+2025-10-19 17:56:51.615 [http-nio-8092-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-10-19 17:56:51.619 [http-nio-8092-exec-5] DEBUG org.hibernate.SQL - select a1_0.id,a1_0.author_id,a2_0.id,a2_0.bio,a2_0.email,a2_0.image,a2_0.password,a2_0.username,a1_0.body,a1_0.created_at,a1_0.description,a1_0.favorites_count,a1_0.locked_at,a1_0.locked_by,a1_0.slug,a1_0.tag_list,a1_0.title,a1_0.updated_at from article a1_0 join user a2_0 on a2_0.id=a1_0.author_id where a2_0.id in (?) order by a1_0.created_at desc,a1_0.created_at desc limit ?
+2025-10-19 17:56:51.622 [http-nio-8092-exec-5] INFO  e.m.b.a.controller.ArticleController - Feed contains 2 articles
+2025-10-19 17:56:51.622 [http-nio-8092-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-10-19 17:56:51.622 [http-nio-8092-exec-5] DEBUG e.m.b.a.config.WrapperResponseAdvice - Processing response body for method: getFeed
+2025-10-19 17:56:51.622 [http-nio-8092-exec-5] DEBUG e.m.b.a.config.WrapperResponseAdvice - No wrapping needed - returning response as-is
+2025-10-19 17:56:51.622 [http-nio-8092-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ArticleListResponse(articles=[ArticleResponse(id=3, slug=dsa-f21pnw, title=DSA, description=Data Str (truncated)...]
+2025-10-19 17:56:51.623 [http-nio-8092-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-10-19 17:57:34.879 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-10-19 17:57:34.899 [restartedMain] INFO  e.m.b.app.MiuBlogBackendApplication - Starting MiuBlogBackendApplication v0.0.1 using Java 24.0.1 with PID 69789 (/Users/leone/Documents/MIU/swe-final-project/miu-blog-backend/build/classes/java/main started by leone in /Users/leone/Documents/MIU/swe-final-project/miu-blog-backend)
+2025-10-19 17:57:34.900 [restartedMain] DEBUG e.m.b.app.MiuBlogBackendApplication - Running with Spring Boot v3.5.4, Spring v6.2.9
+2025-10-19 17:57:34.900 [restartedMain] INFO  e.m.b.app.MiuBlogBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-10-19 17:57:34.925 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-19 17:57:34.925 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-19 17:57:35.361 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-19 17:57:35.404 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 38 ms. Found 4 JPA repository interfaces.
+2025-10-19 17:57:35.722 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8092 (http)
+2025-10-19 17:57:35.730 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8092"]
+2025-10-19 17:57:35.731 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-10-19 17:57:35.731 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-10-19 17:57:35.761 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-10-19 17:57:35.761 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 836 ms
+2025-10-19 17:57:35.764 [restartedMain] INFO  e.m.blog.app.config.GlobalCorsConfig - Configuring CORS filter
+2025-10-19 17:57:35.771 [restartedMain] INFO  e.m.blog.app.config.GlobalCorsConfig - CORS filter configured successfully
+2025-10-19 17:57:35.782 [restartedMain] INFO  edu.miu.blog.app.security.JwtUtil - Initializing JWT utility with secret key
+2025-10-19 17:57:35.804 [restartedMain] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2025-10-19 17:57:35.804 [restartedMain] DEBUG o.s.web.filter.CorsFilter - Filter 'customCorsFilter' configured for use
+2025-10-19 17:57:35.883 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-19 17:57:35.908 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-10-19 17:57:35.928 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-10-19 17:57:36.072 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-19 17:57:36.088 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-10-19 17:57:36.170 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@517d39d2
+2025-10-19 17:57:36.171 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-10-19 17:57:36.193 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-19 17:57:36.201 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.43
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-19 17:57:36.685 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-19 17:57:36.745 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-19 17:57:36.916 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-19 17:57:37.325 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-19 17:57:37.338 [restartedMain] INFO  edu.miu.blog.app.config.WebConfig - Configuring CORS mappings
+2025-10-19 17:57:37.338 [restartedMain] INFO  edu.miu.blog.app.config.WebConfig - CORS mappings configured successfully
+2025-10-19 17:57:37.373 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 18 mappings in 'requestMappingHandlerMapping'
+2025-10-19 17:57:37.396 [restartedMain] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-10-19 17:57:37.406 [restartedMain] INFO  e.m.blog.app.security.SecurityConfig - Creating BCrypt password encoder
+2025-10-19 17:57:37.407 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: d717b339-48f5-4f30-b610-3a5c1e8e05c0
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-10-19 17:57:37.411 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-10-19 17:57:37.434 [restartedMain] INFO  e.m.blog.app.security.SecurityConfig - Configuring security filter chain
+2025-10-19 17:57:37.451 [restartedMain] INFO  e.m.blog.app.security.SecurityConfig - Security configuration completed
+2025-10-19 17:57:37.461 [restartedMain] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-10-19 17:57:37.505 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 2 RequestBodyAdvice, 2 ResponseBodyAdvice
+2025-10-19 17:57:37.533 [restartedMain] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 2 ResponseBodyAdvice
+2025-10-19 17:57:37.588 [restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer - Unable to start LiveReload server
+2025-10-19 17:57:37.597 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8092"]
+2025-10-19 17:57:37.601 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-10-19 17:57:37.603 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-19 17:57:37.605 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-10-19 17:57:37.610 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-10-19 17:57:37.619 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-10-19 17:57:37.631 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8092 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8092 or configure this application to listen on another port.
+
+2025-10-19 17:59:00.622 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-19 17:59:00.628 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-10-19 17:59:00.632 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-19 17:59:00.634 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-10-19 17:59:00.638 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-10-19 17:59:38.363 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+2025-10-19 17:59:38.398 [restartedMain] INFO  e.m.b.app.MiuBlogBackendApplication - Starting MiuBlogBackendApplication v0.0.1 using Java 24.0.1 with PID 71149 (/Users/leone/Documents/MIU/swe-final-project/miu-blog-backend/build/classes/java/main started by leone in /Users/leone/Documents/MIU/swe-final-project/miu-blog-backend)
+2025-10-19 17:59:38.399 [restartedMain] DEBUG e.m.b.app.MiuBlogBackendApplication - Running with Spring Boot v3.5.4, Spring v6.2.9
+2025-10-19 17:59:38.399 [restartedMain] INFO  e.m.b.app.MiuBlogBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2025-10-19 17:59:38.439 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-19 17:59:38.440 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-19 17:59:38.949 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-19 17:59:38.985 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 32 ms. Found 4 JPA repository interfaces.
+2025-10-19 17:59:39.337 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8092 (http)
+2025-10-19 17:59:39.346 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8092"]
+2025-10-19 17:59:39.346 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-10-19 17:59:39.347 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-10-19 17:59:39.374 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-10-19 17:59:39.374 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 934 ms
+2025-10-19 17:59:39.377 [restartedMain] INFO  e.m.blog.app.config.GlobalCorsConfig - Configuring CORS filter
+2025-10-19 17:59:39.384 [restartedMain] INFO  e.m.blog.app.config.GlobalCorsConfig - CORS filter configured successfully
+2025-10-19 17:59:39.393 [restartedMain] INFO  edu.miu.blog.app.security.JwtUtil - Initializing JWT utility with secret key
+2025-10-19 17:59:39.415 [restartedMain] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2025-10-19 17:59:39.415 [restartedMain] DEBUG o.s.web.filter.CorsFilter - Filter 'customCorsFilter' configured for use
+2025-10-19 17:59:39.483 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-19 17:59:39.507 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-10-19 17:59:39.526 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-10-19 17:59:39.674 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-19 17:59:39.689 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-10-19 17:59:39.766 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6ebfba43
+2025-10-19 17:59:39.767 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-10-19 17:59:39.790 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-10-19 17:59:39.798 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.43
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-19 17:59:40.262 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-19 17:59:40.325 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-19 17:59:40.459 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-10-19 17:59:40.831 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-19 17:59:40.843 [restartedMain] INFO  edu.miu.blog.app.config.WebConfig - Configuring CORS mappings
+2025-10-19 17:59:40.844 [restartedMain] INFO  edu.miu.blog.app.config.WebConfig - CORS mappings configured successfully
+2025-10-19 17:59:40.874 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 18 mappings in 'requestMappingHandlerMapping'
+2025-10-19 17:59:40.892 [restartedMain] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-10-19 17:59:40.902 [restartedMain] INFO  e.m.blog.app.security.SecurityConfig - Creating BCrypt password encoder
+2025-10-19 17:59:40.903 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 44477300-ebc0-47f1-8713-2d3472c635b7
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-10-19 17:59:40.906 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-10-19 17:59:40.926 [restartedMain] INFO  e.m.blog.app.security.SecurityConfig - Configuring security filter chain
+2025-10-19 17:59:40.937 [restartedMain] INFO  e.m.blog.app.security.SecurityConfig - Security configuration completed
+2025-10-19 17:59:40.943 [restartedMain] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-10-19 17:59:40.979 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 2 RequestBodyAdvice, 2 ResponseBodyAdvice
+2025-10-19 17:59:41.000 [restartedMain] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 2 ResponseBodyAdvice
+2025-10-19 17:59:41.046 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-10-19 17:59:41.054 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8092"]
+2025-10-19 17:59:41.062 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8092 (http) with context path '/'
+2025-10-19 17:59:41.070 [restartedMain] INFO  e.m.b.app.MiuBlogBackendApplication - Started MiuBlogBackendApplication in 3.449 seconds (process running for 3.817)
+2025-10-19 17:59:41.073 [restartedMain] INFO  e.m.b.app.MiuBlogBackendApplication - MIU Blog Backend Application started successfully
+2025-10-19 17:59:50.163 [http-nio-8092-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-19 17:59:50.163 [http-nio-8092-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-10-19 17:59:50.163 [http-nio-8092-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2025-10-19 17:59:50.163 [http-nio-8092-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2025-10-19 17:59:50.163 [http-nio-8092-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2025-10-19 17:59:50.164 [http-nio-8092-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@e86d1cc
+2025-10-19 17:59:50.164 [http-nio-8092-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@43a4f0ce
+2025-10-19 17:59:50.164 [http-nio-8092-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-10-19 17:59:50.164 [http-nio-8092-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-10-19 17:59:50.205 [http-nio-8092-exec-5] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/users
+2025-10-19 17:59:50.205 [http-nio-8092-exec-6] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/tags
+2025-10-19 17:59:50.205 [http-nio-8092-exec-3] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/articles?limit=10
+2025-10-19 17:59:50.208 [http-nio-8092-exec-5] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Processing request: GET /api/users
+2025-10-19 17:59:50.208 [http-nio-8092-exec-3] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Processing request: GET /api/articles
+2025-10-19 17:59:50.208 [http-nio-8092-exec-6] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Processing request: GET /api/tags
+2025-10-19 17:59:50.208 [http-nio-8092-exec-5] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Found Authorization header
+2025-10-19 17:59:50.208 [http-nio-8092-exec-5] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Resolving token from header
+2025-10-19 17:59:50.208 [http-nio-8092-exec-5] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Found Token header
+2025-10-19 17:59:50.208 [http-nio-8092-exec-3] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Found Authorization header
+2025-10-19 17:59:50.209 [http-nio-8092-exec-5] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Validating JWT token
+2025-10-19 17:59:50.209 [http-nio-8092-exec-3] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Resolving token from header
+2025-10-19 17:59:50.209 [http-nio-8092-exec-5] DEBUG edu.miu.blog.app.security.JwtUtil - Extracting claims from JWT token
+2025-10-19 17:59:50.209 [http-nio-8092-exec-6] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Found Authorization header
+2025-10-19 17:59:50.209 [http-nio-8092-exec-3] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Found Token header
+2025-10-19 17:59:50.209 [http-nio-8092-exec-6] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Resolving token from header
+2025-10-19 17:59:50.209 [http-nio-8092-exec-6] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Found Token header
+2025-10-19 17:59:50.209 [http-nio-8092-exec-6] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Validating JWT token
+2025-10-19 17:59:50.209 [http-nio-8092-exec-3] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Validating JWT token
+2025-10-19 17:59:50.209 [http-nio-8092-exec-6] DEBUG edu.miu.blog.app.security.JwtUtil - Extracting claims from JWT token
+2025-10-19 17:59:50.209 [http-nio-8092-exec-3] DEBUG edu.miu.blog.app.security.JwtUtil - Extracting claims from JWT token
+2025-10-19 17:59:50.283 [http-nio-8092-exec-5] DEBUG edu.miu.blog.app.security.JwtUtil - Successfully extracted claims from JWT token
+2025-10-19 17:59:50.283 [http-nio-8092-exec-6] DEBUG edu.miu.blog.app.security.JwtUtil - Successfully extracted claims from JWT token
+2025-10-19 17:59:50.283 [http-nio-8092-exec-3] DEBUG edu.miu.blog.app.security.JwtUtil - Successfully extracted claims from JWT token
+2025-10-19 17:59:50.284 [http-nio-8092-exec-3] DEBUG e.m.b.a.s.JwtAuthenticationFilter - JWT token validated for user: leone
+2025-10-19 17:59:50.284 [http-nio-8092-exec-6] DEBUG e.m.b.a.s.JwtAuthenticationFilter - JWT token validated for user: leone
+2025-10-19 17:59:50.284 [http-nio-8092-exec-5] DEBUG e.m.b.a.s.JwtAuthenticationFilter - JWT token validated for user: leone
+2025-10-19 17:59:50.298 [http-nio-8092-exec-6] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/tags
+2025-10-19 17:59:50.298 [http-nio-8092-exec-5] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/users
+2025-10-19 17:59:50.298 [http-nio-8092-exec-3] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/articles?limit=10
+2025-10-19 17:59:50.301 [http-nio-8092-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/tags", parameters={}
+2025-10-19 17:59:50.301 [http-nio-8092-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/users", parameters={}
+2025-10-19 17:59:50.302 [http-nio-8092-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/articles?limit=10", parameters={masked}
+2025-10-19 17:59:50.302 [http-nio-8092-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to edu.miu.blog.app.controller.UserController#findMe()
+2025-10-19 17:59:50.302 [http-nio-8092-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to edu.miu.blog.app.controller.TagController#getTags()
+2025-10-19 17:59:50.303 [http-nio-8092-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to edu.miu.blog.app.controller.ArticleController#listArticles(String, String, String, int, int)
+2025-10-19 17:59:50.323 [http-nio-8092-exec-6] INFO  e.m.b.app.controller.TagController - Getting all tags
+2025-10-19 17:59:50.323 [http-nio-8092-exec-6] INFO  e.m.b.a.service.impl.TagServiceImpl - Getting all tags
+2025-10-19 17:59:50.325 [http-nio-8092-exec-5] DEBUG e.m.b.app.controller.UserController - User requesting own profile: leone
+2025-10-19 17:59:50.329 [http-nio-8092-exec-5] DEBUG e.m.b.a.service.impl.UserServiceImpl - Finding user by email: leoz.31@hotmail.com
+2025-10-19 17:59:50.338 [http-nio-8092-exec-3] INFO  e.m.b.a.controller.ArticleController - Listing articles with filters - tag: null, author: null, favorited: null, limit: 10, offset: 0
+2025-10-19 17:59:50.338 [http-nio-8092-exec-3] DEBUG e.m.b.a.controller.ArticleController - User requesting articles: leone
+2025-10-19 17:59:50.339 [http-nio-8092-exec-3] INFO  e.m.b.a.s.impl.ArticleServiceImpl - Listing articles for user: 1 with params: tag=null, author=null, favorited=null, limit=10, offset=0
+2025-10-19 17:59:50.391 [http-nio-8092-exec-5] DEBUG org.hibernate.SQL - select u1_0.id,u1_0.bio,u1_0.email,u1_0.image,u1_0.password,u1_0.username from user u1_0 where u1_0.email=?
+2025-10-19 17:59:50.391 [http-nio-8092-exec-3] DEBUG org.hibernate.SQL - select a1_0.id,a1_0.author_id,a1_0.body,a1_0.created_at,a1_0.description,a1_0.favorites_count,a1_0.locked_at,a1_0.locked_by,a1_0.slug,a1_0.tag_list,a1_0.title,a1_0.updated_at from article a1_0 order by a1_0.created_at desc limit ?,?
+2025-10-19 17:59:50.391 [http-nio-8092-exec-6] DEBUG org.hibernate.SQL - select t1_0.id,t1_0.name from tag t1_0
+2025-10-19 17:59:50.466 [http-nio-8092-exec-5] DEBUG e.m.b.a.service.impl.UserServiceImpl - User found: leone
+2025-10-19 17:59:50.466 [http-nio-8092-exec-5] DEBUG edu.miu.blog.app.security.JwtUtil - Generating JWT token for user: leone
+2025-10-19 17:59:50.469 [http-nio-8092-exec-6] INFO  e.m.b.a.service.impl.TagServiceImpl - Retrieved 4 tags
+2025-10-19 17:59:50.469 [http-nio-8092-exec-6] INFO  e.m.b.app.controller.TagController - Retrieved 4 tags
+2025-10-19 17:59:50.470 [http-nio-8092-exec-3] INFO  e.m.b.a.s.impl.ArticleServiceImpl - Found 5 articles out of 5 total
+2025-10-19 17:59:50.474 [http-nio-8092-exec-3] DEBUG org.hibernate.SQL - select u1_0.id,u1_0.bio,u1_0.email,u1_0.image,u1_0.password,u1_0.username from user u1_0 where u1_0.id=?
+2025-10-19 17:59:50.478 [http-nio-8092-exec-3] DEBUG org.hibernate.SQL - select u1_0.id,u1_0.bio,u1_0.email,u1_0.image,u1_0.password,u1_0.username from user u1_0 where u1_0.id=?
+2025-10-19 17:59:50.480 [http-nio-8092-exec-3] DEBUG org.hibernate.SQL - select u1_0.id,u1_0.bio,u1_0.email,u1_0.image,u1_0.password,u1_0.username from user u1_0 where u1_0.id=?
+2025-10-19 17:59:50.482 [http-nio-8092-exec-3] DEBUG org.hibernate.SQL - select u1_0.id,u1_0.bio,u1_0.email,u1_0.image,u1_0.password,u1_0.username from user u1_0 where u1_0.id=?
+2025-10-19 17:59:50.483 [http-nio-8092-exec-3] INFO  e.m.b.a.controller.ArticleController - Found 5 articles
+2025-10-19 17:59:50.491 [http-nio-8092-exec-5] DEBUG edu.miu.blog.app.security.JwtUtil - JWT token generated successfully for user: leone
+2025-10-19 17:59:50.491 [http-nio-8092-exec-5] DEBUG e.m.b.app.controller.UserController - Profile retrieved for user: leone
+2025-10-19 17:59:50.492 [http-nio-8092-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-10-19 17:59:50.492 [http-nio-8092-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-10-19 17:59:50.492 [http-nio-8092-exec-3] DEBUG e.m.b.a.config.WrapperResponseAdvice - Processing response body for method: listArticles
+2025-10-19 17:59:50.492 [http-nio-8092-exec-6] DEBUG e.m.b.a.config.WrapperResponseAdvice - Processing response body for method: getTags
+2025-10-19 17:59:50.492 [http-nio-8092-exec-3] DEBUG e.m.b.a.config.WrapperResponseAdvice - No wrapping needed - returning response as-is
+2025-10-19 17:59:50.492 [http-nio-8092-exec-6] DEBUG e.m.b.a.config.WrapperResponseAdvice - No wrapping needed - returning response as-is
+2025-10-19 17:59:50.493 [http-nio-8092-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [TagsResponse(tags=[DSA, Ecuador, Morocco, SWE])]
+2025-10-19 17:59:50.496 [http-nio-8092-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-10-19 17:59:50.497 [http-nio-8092-exec-5] DEBUG e.m.b.a.config.WrapperResponseAdvice - Processing response body for method: findMe
+2025-10-19 17:59:50.497 [http-nio-8092-exec-5] DEBUG e.m.b.a.config.WrapperResponseAdvice - No wrapping needed - returning response as-is
+2025-10-19 17:59:50.497 [http-nio-8092-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [UserResponse(id=null, email=leoz.31@hotmail.com, token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJsZW96LjMxQGhv (truncated)...]
+2025-10-19 17:59:50.508 [http-nio-8092-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-10-19 17:59:50.509 [http-nio-8092-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-10-19 17:59:50.509 [http-nio-8092-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ArticleListResponse(articles=[ArticleResponse(id=5, slug=the-essence-of-software-engineering-me7hv7, (truncated)...]
+2025-10-19 17:59:50.529 [http-nio-8092-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-10-19 17:59:50.539 [http-nio-8092-exec-8] DEBUG o.s.security.web.FilterChainProxy - Securing GET /api/articles/feed?limit=10
+2025-10-19 17:59:50.539 [http-nio-8092-exec-8] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Processing request: GET /api/articles/feed
+2025-10-19 17:59:50.539 [http-nio-8092-exec-8] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Found Authorization header
+2025-10-19 17:59:50.539 [http-nio-8092-exec-8] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Resolving token from header
+2025-10-19 17:59:50.540 [http-nio-8092-exec-8] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Found Token header
+2025-10-19 17:59:50.540 [http-nio-8092-exec-8] DEBUG e.m.b.a.s.JwtAuthenticationFilter - Validating JWT token
+2025-10-19 17:59:50.540 [http-nio-8092-exec-8] DEBUG edu.miu.blog.app.security.JwtUtil - Extracting claims from JWT token
+2025-10-19 17:59:50.541 [http-nio-8092-exec-8] DEBUG edu.miu.blog.app.security.JwtUtil - Successfully extracted claims from JWT token
+2025-10-19 17:59:50.542 [http-nio-8092-exec-8] DEBUG e.m.b.a.s.JwtAuthenticationFilter - JWT token validated for user: leone
+2025-10-19 17:59:50.542 [http-nio-8092-exec-8] DEBUG o.s.security.web.FilterChainProxy - Secured GET /api/articles/feed?limit=10
+2025-10-19 17:59:50.543 [http-nio-8092-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/articles/feed?limit=10", parameters={masked}
+2025-10-19 17:59:50.543 [http-nio-8092-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to edu.miu.blog.app.controller.ArticleController#getFeed(int, int)
+2025-10-19 17:59:50.546 [http-nio-8092-exec-8] INFO  e.m.b.a.controller.ArticleController - Getting feed for user with limit: 10, offset: 0
+2025-10-19 17:59:50.546 [http-nio-8092-exec-8] DEBUG e.m.b.a.controller.ArticleController - User requesting feed: leone
+2025-10-19 17:59:50.555 [http-nio-8092-exec-8] DEBUG org.hibernate.SQL - select u1_0.id,u1_0.bio,u1_0.email,u1_0.image,u1_0.password,u1_0.username from user u1_0 where u1_0.id=?
+2025-10-19 17:59:50.567 [http-nio-8092-exec-8] DEBUG org.hibernate.SQL - select f1_0.follower,f1_1.id,f1_1.bio,f1_1.email,f1_1.image,f1_1.password,f1_1.username from user_to_follower f1_0 join user f1_1 on f1_1.id=f1_0.following where f1_0.follower=?
+2025-10-19 17:59:50.585 [http-nio-8092-exec-8] DEBUG org.hibernate.SQL - select a1_0.id,a1_0.author_id,a2_0.id,a2_0.bio,a2_0.email,a2_0.image,a2_0.password,a2_0.username,a1_0.body,a1_0.created_at,a1_0.description,a1_0.favorites_count,a1_0.locked_at,a1_0.locked_by,a1_0.slug,a1_0.tag_list,a1_0.title,a1_0.updated_at from article a1_0 join user a2_0 on a2_0.id=a1_0.author_id where a2_0.id in (?) order by a1_0.created_at desc,a1_0.created_at desc limit ?
+2025-10-19 17:59:50.588 [http-nio-8092-exec-8] INFO  e.m.b.a.controller.ArticleController - Feed contains 2 articles
+2025-10-19 17:59:50.588 [http-nio-8092-exec-8] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json]
+2025-10-19 17:59:50.588 [http-nio-8092-exec-8] DEBUG e.m.b.a.config.WrapperResponseAdvice - Processing response body for method: getFeed
+2025-10-19 17:59:50.589 [http-nio-8092-exec-8] DEBUG e.m.b.a.config.WrapperResponseAdvice - No wrapping needed - returning response as-is
+2025-10-19 17:59:50.589 [http-nio-8092-exec-8] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ArticleListResponse(articles=[ArticleResponse(id=3, slug=dsa-f21pnw, title=DSA, description=Data Str (truncated)...]
+2025-10-19 17:59:50.591 [http-nio-8092-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-10-19 19:14:03.001 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-19 19:14:03.006 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-10-19 19:14:03.011 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-19 19:14:03.014 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-10-19 19:14:03.015 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
