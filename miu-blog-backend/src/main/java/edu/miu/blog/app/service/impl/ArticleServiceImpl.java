@@ -7,6 +7,7 @@ import edu.miu.blog.app.dto.article.*;
 import edu.miu.blog.app.dto.roaster.RoasterDto;
 import edu.miu.blog.app.dto.user.UserResponse;
 import edu.miu.blog.app.error.exception.ResourceNotFoundException;
+import edu.miu.blog.app.kafka.ArticleProducer;
 import edu.miu.blog.app.repository.ArticleRepository;
 import edu.miu.blog.app.repository.ArticleSpecifications;
 import edu.miu.blog.app.repository.TagRepository;
@@ -19,6 +20,8 @@ import edu.miu.blog.app.util.SlugUtil;
 import jakarta.persistence.EntityManager;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
@@ -41,6 +44,8 @@ public class ArticleServiceImpl implements ArticleService {
     private final EntityManager entityManager;
     private final JwtUtil jwtUtil;
 
+    @Autowired
+    private final ArticleProducer articleProducer;
 
     @Override
     @Transactional
@@ -76,6 +81,7 @@ public class ArticleServiceImpl implements ArticleService {
 
         articleRepository.save(article);
         log.info("Article saved successfully with slug: {}", article.getSlug());
+        articleProducer.sendArticleCreatedEvent(article);
 
         return handlerArticleResponse(article);
     }

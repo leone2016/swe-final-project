@@ -21,7 +21,7 @@ spring:
       properties:
         spring.json.trusted.packages: "*"
     producer:
-      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
   mail:
     host: smtp.gmail.com
     port: 587
@@ -76,3 +76,7 @@ logging:
     name: logs/miu-blog-backend.log
     max-size: 10MB
     max-history: 30
+# Propiedad personalizada para topic
+app:
+  kafka:
+    topic: article-events
