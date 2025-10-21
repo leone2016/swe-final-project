@@ -64,6 +64,8 @@ dependencies {
     // Spring Boot JSON Starter
     implementation 'org.springframework.boot:spring-boot-starter-json'
 
+	implementation("io.mailtrap:mailtrap-java:1.0.0")
+
 }
 
 //tasks.named('test') {

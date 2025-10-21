@@ -74,6 +74,7 @@ services:
       timeout: 10s
       retries: 5
 
+
 networks:
   miublog-network:
     driver: bridge

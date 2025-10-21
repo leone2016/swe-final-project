@@ -72,4 +72,6 @@ public class Article {
     public void setTags(List<Tag> tags) {
         this.tags = tags;
     }
+
+
 }
