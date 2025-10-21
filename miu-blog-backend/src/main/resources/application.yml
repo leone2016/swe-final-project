@@ -21,16 +21,9 @@ spring:
       properties:
         spring.json.trusted.packages: "*"
     producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
 
-  mail:
-    host: smtp.gmail.com
-    port: 587
-    username: lmedinaencalada@gmail.com
-    password: $SPRING_MAIL_PASSWORD
-    properties:
-      mail.smtp.auth: true
-      mail.smtp.starttls.enable: true
   h2:
     console:
       enabled: false
@@ -70,6 +63,8 @@ logging:
     org.hibernate.SQL: DEBUG
     org.hibernate.type.descriptor.sql.BasicBinder: TRACE
     org.springframework.transaction: DEBUG
+    org.springframework.kafka.listener: DEBUG
+    org.springframework.mail: DEBUG
   pattern:
     console: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"
     file: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"
@@ -81,3 +76,5 @@ logging:
 app:
   kafka:
     topic: article-events
+  mail:
+    token: $MAILTRAP_TOKEN
