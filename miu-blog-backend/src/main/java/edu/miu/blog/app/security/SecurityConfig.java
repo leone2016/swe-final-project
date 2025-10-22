@@ -38,6 +38,7 @@ public class SecurityConfig {
                                 "/webjars/**"
                         ).permitAll()
                         .requestMatchers(HttpMethod.POST, "/api/users/login").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/api/users/health").permitAll()
                         .requestMatchers(HttpMethod.POST, "/api/users").permitAll()
                         .requestMatchers(HttpMethod.GET, "/api/tags").permitAll()
                         .requestMatchers(HttpMethod.GET, "/api/articles/roaster").permitAll()

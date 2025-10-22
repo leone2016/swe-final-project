@@ -22,7 +22,7 @@ import java.util.List;
 @Service
 @Slf4j
 public class ArticleConsumer {
-    @Value("${app.mail.tolken}")
+    @Value("${app.mail.token}")
     private final String TOKEN = "<NO-TOKEN>";
 
     @KafkaListener(
