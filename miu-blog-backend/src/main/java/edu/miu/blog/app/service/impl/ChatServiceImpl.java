@@ -7,24 +7,44 @@ import org.springframework.http.*;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.Map;
+import java.util.*;
+import java.util.stream.Collectors;
 
 @Service
 public class ChatServiceImpl implements ChatService {
 
     private static final String OLLAMA_URL = "http://localhost:11434/api/chat";
 
+    // Store memory of the chat in memory
+    private final List<Map<String, String>> conversationHistory = new ArrayList<>();
+
     @Override
     public ChatResponse sendToLlama(ChatRequest request) {
+
+        if (conversationHistory.isEmpty()) {
+            conversationHistory.add(Map.of(
+                    "role", "system",
+                    "content", "You are Edd, a friendly helpful assistant that chats like a human. you only assist" +
+                            "people for creating blogs and you are integrated in a a blog website."
+            ));
+        }
+
         RestTemplate restTemplate = new RestTemplate();
 
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
 
-        // Include "stream": false to get full response at once
+        // Convert ChatMessage objects into Map of String, String
+        List<Map<String, String>> newMessages = request.getMessages().stream()
+                .map(msg -> Map.of("role", msg.getRole(), "content", msg.getContent()))
+                .toList();
+
+        // Add to history
+        conversationHistory.addAll(newMessages);
+
         Map<String, Object> body = Map.of(
                 "model", request.getModel(),
-                "messages", request.getMessages(),
+                "messages", conversationHistory,
                 "stream", false
         );
 
@@ -39,18 +59,23 @@ public class ChatServiceImpl implements ChatService {
                     Map.class
             );
 
-            Map<String, Object> data = response.getBody();
+            Map data = response.getBody();
             if (data != null && data.get("message") instanceof Map<?, ?> msg) {
                 String content = (String) msg.get("content");
-                System.out.println("🟢 Ollama Response: " + content);
+                System.out.println("Ollama Response: " + content);
+
+                // Store assistant reply in history
+                conversationHistory.add(Map.of("role", "assistant", "content", content));
+
                 return new ChatResponse(content);
             }
 
             return new ChatResponse("No valid reply from Ollama.");
         } catch (Exception e) {
             e.printStackTrace();
-            System.out.println("🔴 Ollama error: " + e.getMessage());
+            System.out.println("Ollama error: " + e.getMessage());
             return new ChatResponse("Error calling Ollama: " + e.getMessage());
         }
     }
+
 }
