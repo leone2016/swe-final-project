@@ -429,3 +429,47 @@ Action:
 
 Consider defining a bean of type 'edu.miu.blog.app.security.JwtUtil' in your configuration.
 
+2025-10-22 16:55:17.768 [Test worker] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in edu.miu.blog.app.security.JwtAuthenticationFilter required a bean of type 'edu.miu.blog.app.security.JwtUtil' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'edu.miu.blog.app.security.JwtUtil' in your configuration.
+
+2025-10-22 16:56:27.949 [Test worker] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in edu.miu.blog.app.security.JwtAuthenticationFilter required a bean of type 'edu.miu.blog.app.security.JwtUtil' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'edu.miu.blog.app.security.JwtUtil' in your configuration.
+
+2025-10-22 17:14:32.470 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8092 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8092 or configure this application to listen on another port.
+
