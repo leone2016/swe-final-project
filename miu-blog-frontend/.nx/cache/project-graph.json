@@ -414,52 +414,6 @@
         "implicitDependencies": []
       }
     },
-    "core-http-client": {
-      "name": "core-http-client",
-      "type": "lib",
-      "data": {
-        "name": "core-http-client",
-        "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-        "projectType": "library",
-        "sourceRoot": "libs/core/http-client/src",
-        "prefix": "cdt",
-        "targets": {
-          "test": {
-            "inputs": [
-              "default",
-              "^production",
-              "{workspaceRoot}/jest.preset.js"
-            ],
-            "executor": "@nx/jest:jest",
-            "outputs": [
-              "{workspaceRoot}/coverage/libs/core/http-client"
-            ],
-            "options": {
-              "jestConfig": "libs/core/http-client/jest.config.ts",
-              "passWithNoTests": true
-            },
-            "configurations": {}
-          },
-          "lint": {
-            "inputs": [
-              "default",
-              "{workspaceRoot}/.eslintrc.json"
-            ],
-            "executor": "@nx/linter:eslint",
-            "options": {
-              "lintFilePatterns": [
-                "libs/core/http-client/src/**/*.ts",
-                "libs/core/http-client/src/**/*.html"
-              ]
-            },
-            "configurations": {}
-          }
-        },
-        "tags": [],
-        "root": "libs/core/http-client",
-        "implicitDependencies": []
-      }
-    },
     "auth-data-access": {
       "name": "auth-data-access",
       "type": "lib",
@@ -503,6 +457,52 @@
         },
         "tags": [],
         "root": "libs/auth/data-access",
+        "implicitDependencies": []
+      }
+    },
+    "core-http-client": {
+      "name": "core-http-client",
+      "type": "lib",
+      "data": {
+        "name": "core-http-client",
+        "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+        "projectType": "library",
+        "sourceRoot": "libs/core/http-client/src",
+        "prefix": "cdt",
+        "targets": {
+          "test": {
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "executor": "@nx/jest:jest",
+            "outputs": [
+              "{workspaceRoot}/coverage/libs/core/http-client"
+            ],
+            "options": {
+              "jestConfig": "libs/core/http-client/jest.config.ts",
+              "passWithNoTests": true
+            },
+            "configurations": {}
+          },
+          "lint": {
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json"
+            ],
+            "executor": "@nx/linter:eslint",
+            "options": {
+              "lintFilePatterns": [
+                "libs/core/http-client/src/**/*.ts",
+                "libs/core/http-client/src/**/*.html"
+              ]
+            },
+            "configurations": {}
+          }
+        },
+        "tags": [],
+        "root": "libs/core/http-client",
         "implicitDependencies": []
       }
     },
@@ -25494,28 +25494,6 @@
         "type": "static"
       }
     ],
-    "core-http-client": [
-      {
-        "source": "core-http-client",
-        "target": "npm:@angular/core",
-        "type": "static"
-      },
-      {
-        "source": "core-http-client",
-        "target": "npm:@angular/common",
-        "type": "static"
-      },
-      {
-        "source": "core-http-client",
-        "target": "npm:rxjs",
-        "type": "static"
-      },
-      {
-        "source": "core-http-client",
-        "target": "npm:jest-preset-angular",
-        "type": "static"
-      }
-    ],
     "auth-data-access": [
       {
         "source": "auth-data-access",
@@ -25574,6 +25552,28 @@
       },
       {
         "source": "auth-data-access",
+        "target": "npm:jest-preset-angular",
+        "type": "static"
+      }
+    ],
+    "core-http-client": [
+      {
+        "source": "core-http-client",
+        "target": "npm:@angular/core",
+        "type": "static"
+      },
+      {
+        "source": "core-http-client",
+        "target": "npm:@angular/common",
+        "type": "static"
+      },
+      {
+        "source": "core-http-client",
+        "target": "npm:rxjs",
+        "type": "static"
+      },
+      {
+        "source": "core-http-client",
         "target": "npm:jest-preset-angular",
         "type": "static"
       }
