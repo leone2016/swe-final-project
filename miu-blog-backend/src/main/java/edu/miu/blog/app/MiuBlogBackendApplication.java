@@ -23,7 +23,7 @@ import java.util.Map;
 @EnableKafka
 @Slf4j
 public class MiuBlogBackendApplication implements CommandLineRunner {
-	@Value("localhost:9092")
+	@Value("localhost:9092")//kafka
 	private String bootstrapServers;
 
 

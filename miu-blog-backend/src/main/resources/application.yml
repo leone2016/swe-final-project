@@ -63,7 +63,7 @@ logging:
     org.hibernate.SQL: DEBUG
     org.hibernate.type.descriptor.sql.BasicBinder: TRACE
     org.springframework.transaction: DEBUG
-    org.springframework.kafka.listener: DEBUG
+    org.springframework.kafka.listener: ERROR
     org.springframework.mail: DEBUG
   pattern:
     console: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"
