@@ -46,6 +46,6 @@ class TagControllerRestAssuredTest {
         .when()
             .get()
         .then()
-            .statusCode(200)
+            .statusCode(200);
     }
 }
