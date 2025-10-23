@@ -23,6 +23,13 @@ public class UserController {
 
     private final UserService userService;
 
+    @WrapWith("omit")
+    @GetMapping("/health")
+    public ResponseEntity<String> health() {
+        log.info("health endpoint called");
+        return ResponseEntity.ok("Hello, User!");
+    }
+
 
     @PostMapping
     public ResponseEntity<UserResponse> register(
